@@ -1,5 +1,8 @@
 # kolibriBlitz.github.io
 ## My github website to showcase my skills
 
-- SQL
-- Python
+- Coding
+-- SQL
+-- Python
+
+- Business Analysis
