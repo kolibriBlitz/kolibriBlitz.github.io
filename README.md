@@ -2,7 +2,7 @@
 ## My github website to showcase my skills
 
 - Coding
--- SQL
--- Python
+  - SQL
+  - Python
 
 - Business Analysis
