@@ -30,14 +30,14 @@ html {
 header{
      background: rgba(150,198,217,1);
   }
-nav{
+.nav{
     background: rgba(1,52,64,1);
   }
-nav ul{
+.nav ul{
     list-style: none;
     padding: 72;
   }
-nav li{
+.nav li{
   display: inline-block;
   }
 body{
