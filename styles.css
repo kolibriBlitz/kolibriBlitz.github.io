@@ -19,5 +19,6 @@ body{
 .colortheme_analysiswoman_colorful-3-hsla { color: hsla(191, 96, 12, 1); }
 .colortheme_analysiswoman_colorful-4-hsla { color: hsla(190, 57, 41, 1); }
 .colortheme_analysiswoman_colorful-5-hsla { color: hsla(111, 27, 51, 1); }
-background: rgba(150, 198, 217, 1);
+
+  background: rgba(150, 198, 217, 1);
 }
