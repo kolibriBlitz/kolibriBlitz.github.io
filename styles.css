@@ -1,13 +1,3 @@
-/* 
-  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
-*/
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-body{
 /* Color Theme Swatches in Hex */
 .colortheme_analysiswoman_colorful-1-hex { color: #196283; } /*dark blue*/
 .colortheme_analysiswoman_colorful-2-hex { color: #96C6D9; } /*light blue*/
@@ -28,7 +18,31 @@ body{
 .colortheme_analysiswoman_colorful-3-hsla { color: hsla(191, 96, 12, 1); }
 .colortheme_analysiswoman_colorful-4-hsla { color: hsla(190, 57, 41, 1); }
 .colortheme_analysiswoman_colorful-5-hsla { color: hsla(111, 27, 51, 1); }
-
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+header{
+  nav{
+    background: rgba(1,52,64,1);
+  }
+  nav ul{
+    list-style: none;
+    padding: 72;
+  }
+}
+body{
   background: rgba(150, 198, 217, 1);
   text-color: #013440;
 }
+footer{
+  .contact img{
+    width: 20px;
+  }
+}
+    
