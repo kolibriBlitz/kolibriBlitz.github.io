@@ -28,21 +28,25 @@ html {
   box-sizing: inherit;
 }
 header{
-  nav{
+     background: rgba(150,198,217,1);
+  }
+nav{
     background: rgba(1,52,64,1);
   }
-  nav ul{
+nav ul{
     list-style: none;
     padding: 72;
   }
-}
+nav li{
+  display: inline-block;
+  }
 body{
   background: rgba(150, 198, 217, 1);
   text-color: #013440;
 }
 footer{
-  .contact img{
-    width: 20px;
-  }
+  background: #013440;
 }
-    
+.contact img{
+    width: 20px;
+  }    
