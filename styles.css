@@ -1,3 +1,12 @@
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 body{
 /* Color Theme Swatches in Hex */
 .colortheme_analysiswoman_colorful-1-hex { color: #196283; } /*dark blue*/
