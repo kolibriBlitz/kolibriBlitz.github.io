@@ -1,3 +1,23 @@
 body{
-  background: red;
+/* Color Theme Swatches in Hex */
+.colortheme_analysiswoman_colorful-1-hex { color: #2180A6; } /*blue*/
+.colortheme_analysiswoman_colorful-2-hex { color: #96C6D9; } /*light blue*/
+.colortheme_analysiswoman_colorful-3-hex { color: #013440; } /*dark teal*/
+.colortheme_analysiswoman_colorful-4-hex { color: #2D90A6; } /*teal*/
+.colortheme_analysiswoman_colorful-5-hex { color: #6CA663; } /*green*/
+
+/* Color Theme Swatches in RGBA */
+.colortheme_analysiswoman_colorful-1-rgba { color: rgba(33, 128, 166, 1); }
+.colortheme_analysiswoman_colorful-2-rgba { color: rgba(150, 198, 217, 1); }
+.colortheme_analysiswoman_colorful-3-rgba { color: rgba(1, 52, 64, 1); }
+.colortheme_analysiswoman_colorful-4-rgba { color: rgba(45, 144, 166, 1); }
+.colortheme_analysiswoman_colorful-5-rgba { color: rgba(108, 166, 99, 1); }
+
+/* Color Theme Swatches in HSLA */
+.colortheme_analysiswoman_colorful-1-hsla { color: hsla(197, 66, 39, 1); }
+.colortheme_analysiswoman_colorful-2-hsla { color: hsla(197, 46, 71, 1); }
+.colortheme_analysiswoman_colorful-3-hsla { color: hsla(191, 96, 12, 1); }
+.colortheme_analysiswoman_colorful-4-hsla { color: hsla(190, 57, 41, 1); }
+.colortheme_analysiswoman_colorful-5-hsla { color: hsla(111, 27, 51, 1); }
+background: rgba(150, 198, 217, 1);
 }
