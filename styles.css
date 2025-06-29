@@ -39,6 +39,8 @@ header{
   }
 .nav li{
   display: inline-block;
+  padding: 24;
+  margin: 36;
   }
 body{
   background: rgba(150, 198, 217, 1);
@@ -48,5 +50,5 @@ footer{
   background: #013440;
 }
 .contact img{
-    width: 20px;
+    width: 36px;
   }    
