@@ -49,6 +49,9 @@ body{
 footer{
   background: #013440;
 }
+.contact{
+  align: center;
+}
 .contact img{
     width: 36px;
   }    
