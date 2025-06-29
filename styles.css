@@ -50,7 +50,7 @@ footer{
   background: #013440;
 }
 .contact{
-  align: center;
+  justify-content: center;
 }
 .contact img{
     width: 36px;
