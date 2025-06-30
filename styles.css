@@ -46,7 +46,7 @@ header{
      background: var(blue-light);
   }
 nav{
-    background: rgba(1,52,64,1);
+    background: var(teal-dark);
   }
 nav ul{
     list-style: none;
@@ -57,23 +57,25 @@ nav li{
   display: inline-block;
   }
 nav a:link{
-  color: rgba(150,198,217,1);
+  color: var(blue-light);
 }
 nav a:visited{
-  color: rgba(45, 144, 166, 1);
+  color: var(teal-mid);
 }
 nav a:hover{
-  color: rgba(108, 166, 99, 1);
+  color: var(green-mid);
 }
 
 /*----GLOBAL BODY STYLES----*/
 body{
-  background: rgba(150, 198, 217, 1);
-  color: #013440;
+  background: var(blue-light);
+  color: black;
   margin: 0;
 }
+
+/*----GLOBAL FOOTER STYLES----*/
 footer{
-  background: #013440;
+  background: var(teal-dark);
 }
 .contact{
   
