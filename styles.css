@@ -19,9 +19,112 @@
 .colortheme_analysiswoman_colorful-3-hsla { color: hsla(191, 96, 12, 1); }
 .colortheme_analysiswoman_colorful-4-hsla { color: hsla(190, 57, 41, 1); }
 .colortheme_analysiswoman_colorful-5-hsla { color: hsla(111, 27, 51, 1); }
+
+/*------MONOCHROMATIC SHADES FOR TEXT------*/
+/* Color Theme Swatches in Hex */
+.Blue-Shades-1-hex {
+  color: #1D3742;
+}
+
+.Blue-Shades-2-hex {
+  color: #196283;
+}
+
+.Blue-Shades-3-hex {
+  color: #B0E6FF;
+}
+
+.Blue-Shades-4-hex {
+  color: #DBF4FF;
+}
+
+/* Color Theme Swatches in RGBA */
+.Blue-Shades-1-rgba {
+  color: rgba(29, 55, 66, 1);
+}
+
+.Blue-Shades-2-rgba {
+  color: rgba(25, 98, 131, 1);
+}
+
+.Blue-Shades-3-rgba {
+  color: rgba(176, 230, 255, 1);
+}
+
+.Blue-Shades-4-rgba {
+  color: rgba(219, 244, 255, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+.Blue-Shades-1-hsla {
+  color: hsla(197, 38, 18, 1);
+}
+
+.Blue-Shades-2-hsla {
+  color: hsla(198, 67, 30, 1);
+}
+
+.Blue-Shades-3-hsla {
+  color: hsla(198, 100, 84, 1);
+}
+
+.Blue-Shades-4-hsla {
+  color: hsla(198, 100, 92, 1);
+}
+/* Color Theme Swatches in Hex */
+.Teal-Shades-1-hex {
+  color: #011C23;
+}
+
+.Teal-Shades-2-hex {
+  color: #1B5562;
+}
+
+.Teal-Shades-3-hex {
+  color: #63AEBF;
+}
+
+.Teal-Shades-4-hex {
+  color: #C4F4FF;
+}
+
+/* Color Theme Swatches in RGBA */
+.Teal-Shades-1-rgba {
+  color: rgba(1, 28, 35, 1);
+}
+
+.Teal-Shades-2-rgba {
+  color: rgba(27, 85, 98, 1);
+}
+
+.Teal-Shades-3-rgba {
+  color: rgba(99, 174, 191, 1);
+}
+
+.Teal-Shades-4-rgba {
+  color: rgba(196, 244, 255, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+.Teal-Shades-1-hsla {
+  color: hsla(192, 94, 7, 1);
+}
+
+.Teal-Shades-2-hsla {
+  color: hsla(190, 56, 24, 1);
+}
+
+.Teal-Shades-3-hsla {
+  color: hsla(191, 41, 56, 1);
+}
+
+.Teal-Shades-4-hsla {
+  color: hsla(191, 100, 88, 1);
+}
+
 /* Color Variables */
 :root{
-  --blue-dark: #196283;
+  --blue-mid: #196283;
   --blue-light: #96C6D9;
   --teal-dark: #013440;
   --teal-mid: #2D90A6;
@@ -32,6 +135,7 @@
 */
 html {
   box-sizing: border-box;
+  font-size: 62.5%; /* Base font size using 62.5% Method*/
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -43,44 +147,163 @@ html, body{
 /*----GLOBAL HEADER STYLES----*/
 
 header{
-     background: var(blue-light);
+     background: var(--blue-light);
+     display:flex;
+     flex-direction: column;
   }
 nav{
-    background: var(teal-dark);
+    background: var(--teal-dark);
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: medium;
   }
 nav ul{
     list-style: none;
-    gap: 36;
+    display: flex;
+    justify-content: left;
+    gap: 12px;
     padding: 72;
   }
 nav li{
   display: inline-block;
   }
 nav a:link{
-  color: var(blue-light);
+  color: #35AAC4;
 }
 nav a:visited{
-  color: var(teal-mid);
+  color: var(--teal-mid);
 }
 nav a:hover{
-  color: var(green-mid);
+  color: var(--green-mid);
+}
+/*.logo-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding: 12px;
+}*/
+header .content-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding: 12px 12px;
+  gap: 24px;
+}
+header h1{
+  font-family: "Ink Free", "Papyrus", Tahoma, sans-serif;
+  font-size: 6.4rem; /* 64px */
+  font-style: bold;
+  margin:0;
+  padding:0;
+}
+header p{
+  font-family: "Ink Free",
+    "Papyrus",
+    Tahoma,
+    sans-serif;
+  font-size: 2.8rem; /* 28px */
+  font-style: oblique;
+  margin:0;
 }
 
 /*----GLOBAL BODY STYLES----*/
 body{
-  background: var(blue-light);
+  background: var(--blue-light);
   color: black;
   margin: 0;
+  display:flex;
+  flex-direction: column;
+}
+p{
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 1.6rem; /* 16px */
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+h2{
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 2.4rem; /* 24px */
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+/*----GLOBAL LINK STYLES----*/
+a:link{
+  color: var(--blue-mid);
+}
+a:hover{
+  color: var(--green-mid);
+}
+a:visited{
+  color: var(--teal-dark);
+}
+a{
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 1.6rem; /* 14px */
 }
 
 /*----GLOBAL FOOTER STYLES----*/
 footer{
-  background: var(teal-dark);
-  color: black;
+  background: var(--teal-dark);
+  padding: 5px 12px;
+  display: flex;
+  flex-direction: column;
+  color: #35AAC4;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: small;
 }
 .contact{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contact img{ 
+    width: 30px;
+    margin: 0 5px;
+  }    
+.contact img:hover{
+    opacity: 0.5;
+  }
+  .copy{
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    justify-content: space-between;
+  }
+
+/*----INDEX PAGE STYLES----*/
+ 
+.home-section{
+  background: var(--blue-mid);
+  
+  padding: 12px;
+  margin: 24px 36px;
+  border-radius: 8px;
+}
+.home-section h2{
+  border-bottom: #011C23 dashed 2px;
+  color: var(--green-mid);
+} 
+.home-quote{
+  background: var(--green-mid);
+  padding: 12px;
+  margin: 24px 36px;
+  width: 36%;
+  border-radius: 50px;
+  color: var(--teal-dark);
+  display:flex;
+  
+  flex-direction: column;
+  align-items: center;
   
 }
-.contact img{
-    width: 36px;
-  }    
+
+/*----ABOUT PAGE STYLES----*/
+
+/*----PORTFOLIO PAGE STYLES----*/
+
+/*----CONTACT PAGE STYLES----*/
