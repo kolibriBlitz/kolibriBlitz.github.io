@@ -27,21 +27,33 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+/*----GLOBAL HEADER STYLES----*/
+
 header{
      background: rgba(150,198,217,1);
   }
-.nav{
+nav{
     background: rgba(1,52,64,1);
   }
-.nav ul{
+nav ul{
     list-style: none;
+  list-spacing: 36;
     padding: 72;
   }
-.nav li{
+nav li{
   display: inline-block;
-  padding: 24;
-  margin: 36;
   }
+nav a:link{
+  color: rgba(150,198,217,1);
+}
+nav a:visited{
+  color: rgba(45, 144, 166, 1);
+}
+nav a:hover{
+  color: rgba(108, 166, 99, 1);
+}
+
 body{
   background: rgba(150, 198, 217, 1);
   text-color: #013440;
