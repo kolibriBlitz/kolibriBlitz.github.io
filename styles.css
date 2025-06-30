@@ -76,6 +76,7 @@ body{
 /*----GLOBAL FOOTER STYLES----*/
 footer{
   background: var(teal-dark);
+  color: black;
 }
 .contact{
   
