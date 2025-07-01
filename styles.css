@@ -142,6 +142,17 @@ h2{
   margin: 0 0 12px;
   text-transform: uppercase;
 }
+.content-wrapper{
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto; /* Allow content to grow and shrink */
+  align-items: left;
+  justify-content: center;
+  padding: 12px;
+  min-height: 100%;  /* Use min-height to allow for footer to be at the bottom */
+  max-width: 100%; /* Limit the width of the content */
+  margin: auto; /* Center the content */
+}
 
 /*----GLOBAL LINK STYLES----*/
 a:link{
