@@ -212,7 +212,8 @@ header p{
 
 /*----GLOBAL BODY STYLES----*/
 body{
-  background: var(--blue-light);
+  background: url(analysis woman 840x560.jpg) no-repeat;
+  background-size: cover;
   color: black;
   margin: 0;
   display:flex;
@@ -291,7 +292,7 @@ footer{
 .home-quote{
   background: var(--green-mid);
   padding: 12px;
-  margin: 24px 36px;
+  margin: auto;
   width: 36%;
   border-radius: 50px;
   color: var(--teal-dark);
