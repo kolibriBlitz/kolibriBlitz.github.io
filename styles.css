@@ -185,7 +185,7 @@ body {
   background: url(analysis-woman-840x560.jpg) no-repeat center center fixed;
   background-size: cover;
   font-family: Tahoma, Verdana, sans-serif;
-  color: #011C23;
+  color: #00161b;
   margin: 0;
   padding: 0;
   display: flex;
@@ -208,6 +208,11 @@ p {
   /* 16px */
   line-height: 1.5;
   margin: 0 0 12px;
+}
+
+li{
+  font-size: 1.6rem; /*16 px*/
+  list-style-image: url(checkmark-20px.png);
 }
 
 blockquote{
