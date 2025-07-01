@@ -240,7 +240,7 @@ blockquote{
 
 /*----GLOBAL LINK STYLES----*/
 a:link {
-  color: #1D3742;
+  color: pink;
 }
 
 a:hover {
@@ -248,7 +248,7 @@ a:hover {
 }
 
 a:visited {
-  color: var(--teal-dark);
+  color: red;
 }
 
 a {
