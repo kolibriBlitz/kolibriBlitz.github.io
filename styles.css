@@ -101,7 +101,7 @@ nav a:hover{
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  padding: 12px 12px;
+  padding: 60px 12px;
   gap: 24px;
 }
 header h1{
