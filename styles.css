@@ -96,7 +96,7 @@ nav a:hover{
   color: var(--green-mid);
 }
 
-header .content-wrapper{
+.header-wrapper{
   display: flex;
   flex-direction: row;
   justify-content: left;
