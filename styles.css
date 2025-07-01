@@ -194,6 +194,14 @@ body {
   box-sizing: border-box;
 }
 
+h2 {
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 2.4rem;
+  /* 24px */
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
 p {
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 1.6rem;
@@ -202,13 +210,12 @@ p {
   margin: 0 0 12px;
 }
 
-h2 {
-  font-family: Tahoma, Verdana, sans-serif;
-  font-size: 2.4rem;
-  /* 24px */
-  margin: 0 0 12px;
-  text-transform: uppercase;
+blockquote{
+  font-size: 1.4rem;
+  font-weight: 600;
 }
+
+
 
 .content-wrapper {
   display: flex;
@@ -223,8 +230,7 @@ h2 {
   /* Use min-height to allow for footer to be at the bottom */
   max-width: 100%;
   /* Limit the width of the content */
-  margin: auto;
-  /* Center the content */
+  
 }
 
 /*----GLOBAL LINK STYLES----*/
@@ -303,13 +309,12 @@ footer {
   background: var(--green-mid-semi);
   padding: 5px 12px;
   margin: auto;
-  max-width: 50%;
+  max-width: fit-content;
   border-radius: 40px;
   color: #011C23;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 /*----ABOUT PAGE STYLES----*/
@@ -329,15 +334,14 @@ footer {
 
 .about-quote {
   background: var(--green-mid-semi);
-  padding: 12px;
+  padding: 5px 12px;
   margin: auto;
-  max-width: 50%;
-  border-radius: 50px;
+  max-width: fit-content;
+  border-radius: 40px;
   color: #011C23;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 /*----PORTFOLIO PAGE STYLES----*/
@@ -357,10 +361,10 @@ footer {
 
 .portfolio-quote {
   background: var(--green-mid-semi);
-  padding: 12px;
+  padding: 5px 12px;
   margin: auto;
-  max-width: 50%;
-  border-radius: 50px;
+  max-width: fit-content;
+  border-radius: 40px;
   color: #011C23;
   display: flex;
   flex-direction: column;
@@ -385,10 +389,10 @@ footer {
 
 .contact-quote {
   background: var(--green-mid-semi);
-  padding: 12px;
+  padding: 5px 12px;
   margin: auto;
-  max-width: 50%;
-  border-radius: 50px;
+  max-width: fit-content;
+  border-radius: 40px;
   color: #011C23;
   display: flex;
   flex-direction: column;
