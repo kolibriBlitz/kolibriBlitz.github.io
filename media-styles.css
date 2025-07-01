@@ -1,0 +1,141 @@
+/*********MEDIA Responsive Styles*********/
+@media screen and (max-width: 710px) {
+
+    .header-wrapper {
+        padding: 8px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 4.4rem;
+        /* 44px */
+    }
+
+    header p {
+        font-size: 2rem;
+        /* 20px */
+        font-weight: 600;
+    }
+
+    header img {
+        max-width: 75px;
+    }
+
+    nav a:link,
+    a:hover,
+    a:visited {
+        font-size: 1.2rem;
+        /* 12px */
+    }
+
+    .portfolio-section,
+    .home-section,
+    .about-section,
+    .contact-section {
+        margin: 16px 0;
+        padding: 12px;
+    }
+
+    .portfolio-section h2,
+    .home-section h2,
+    .about-section h2,
+    .contact-section h2 {
+        font-size: 2rem;
+        /*20 px*/
+    }
+
+    .portfolio-section p,
+    .home-section p,
+    .about-section p,
+    .contact-section p {
+        font-size: 1.6rem;
+        /*16 px*/
+        line-height: 1.5;
+    }
+
+    .home-quote,
+    .about-quote,
+    .portfolio-quote,
+    .contact-quote {
+        min-width: 50%;
+        max-width: 90%;
+        max-height: fit-content;
+        padding: 5px;
+        border-radius: 12px;
+    }
+
+    .home-quote p,
+    .about-quote p,
+    .portfolio-quote p,
+    .contact-quote p {
+        font-size: 1.4rem;
+        /* 14px */
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    body {
+        flex-direction: column;
+
+    }
+
+    footer p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    header h1 {
+        font-size: 2.7rem;
+        /*27px*/
+    }
+
+    header p {
+        font-size: 1.5rem;
+        /*15px*/
+        font-weight: 400;
+    }
+
+    header img {
+        max-width: 50px;
+    }
+
+    .portfolio-section h2,
+    .home-section h2,
+    .about-section h2,
+    .contact-section h2 {
+        font-size: 1.6rem;
+        /*6 px*/
+    }
+
+    .portfolio-section p,
+    .home-section p,
+    .about-section p,
+    .contact-section p {
+        font-size: 1.2rem;
+        /*12 px*/
+        line-height: 2;
+    }
+
+    .home-quote,
+    .about-quote,
+    .portfolio-quote,
+    .contact-quote {
+        min-width: 50%;
+        max-width: 90%;
+        max-height: fit-content;
+        padding: 5px;
+        border-radius: 12px;
+    }
+
+    .home-quote p,
+    .about-quote p,
+    .portfolio-quote p,
+    .contact-quote p {
+        font-size: 1.2rem;
+        /* 12px */
+        line-height: 2;
+        margin: 0;
+    }
+}
