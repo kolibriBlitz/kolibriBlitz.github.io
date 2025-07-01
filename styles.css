@@ -212,7 +212,7 @@ p {
 
 li{
   font-size: 1.6rem; /*16 px*/
-  list-style-image: url(checkmark-20px.png);
+  list-style: square;
 }
 
 blockquote{
@@ -240,11 +240,11 @@ blockquote{
 
 /*----GLOBAL LINK STYLES----*/
 a:link {
-  color: var(--teal-mid);
+  color: #63AEBF;
 }
 
 a:hover {
-  color: var(--green-mid);
+  color: var(--green-light);
 }
 
 a:visited {
@@ -335,6 +335,10 @@ footer {
 .about-section h2 {
   border-bottom: var(--teal-dark) dashed 2px;
   color: var(--green-light);
+}
+
+.about-list {
+  list-style-image: url(checkmark-20px.png);
 }
 
 .about-quote {
