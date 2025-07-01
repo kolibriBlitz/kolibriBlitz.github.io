@@ -6,120 +6,36 @@
 .colortheme_analysiswoman_colorful-4-hex { color: #2D90A6; } /*teal*/
 .colortheme_analysiswoman_colorful-5-hex { color: #6CA663; } /*green*/
 
-/* Color Theme Swatches in RGBA */
-.colortheme_analysiswoman_colorful-1-rgba { color: rgba(25, 98, 131, 1); }
-.colortheme_analysiswoman_colorful-2-rgba { color: rgba(150, 198, 217, 1); }
-.colortheme_analysiswoman_colorful-3-rgba { color: rgba(1, 52, 64, 1); }
-.colortheme_analysiswoman_colorful-4-rgba { color: rgba(45, 144, 166, 1); }
-.colortheme_analysiswoman_colorful-5-rgba { color: rgba(108, 166, 99, 1); }
-
-/* Color Theme Swatches in HSLA */
-.colortheme_analysiswoman_colorful-1-hsla { color: hsla(199, 68, 31, 1); }
-.colortheme_analysiswoman_colorful-2-hsla { color: hsla(197, 46, 71, 1); }
-.colortheme_analysiswoman_colorful-3-hsla { color: hsla(191, 96, 12, 1); }
-.colortheme_analysiswoman_colorful-4-hsla { color: hsla(190, 57, 41, 1); }
-.colortheme_analysiswoman_colorful-5-hsla { color: hsla(111, 27, 51, 1); }
-
 /*------MONOCHROMATIC SHADES FOR TEXT------*/
 /* Color Theme Swatches in Hex */
 .Blue-Shades-1-hex {
-  color: #1D3742;
+  color: #1D3742; /*darker blue*/
 }
-
 .Blue-Shades-2-hex {
-  color: #196283;
+  color: #196283; /*dark blue*/
 }
-
 .Blue-Shades-3-hex {
-  color: #B0E6FF;
+  color: #B0E6FF; /*blue*/
 }
-
 .Blue-Shades-4-hex {
-  color: #DBF4FF;
+  color: #DBF4FF; /*lighter blue*/
 }
 
-/* Color Theme Swatches in RGBA */
-.Blue-Shades-1-rgba {
-  color: rgba(29, 55, 66, 1);
-}
-
-.Blue-Shades-2-rgba {
-  color: rgba(25, 98, 131, 1);
-}
-
-.Blue-Shades-3-rgba {
-  color: rgba(176, 230, 255, 1);
-}
-
-.Blue-Shades-4-rgba {
-  color: rgba(219, 244, 255, 1);
-}
-
-/* Color Theme Swatches in HSLA */
-.Blue-Shades-1-hsla {
-  color: hsla(197, 38, 18, 1);
-}
-
-.Blue-Shades-2-hsla {
-  color: hsla(198, 67, 30, 1);
-}
-
-.Blue-Shades-3-hsla {
-  color: hsla(198, 100, 84, 1);
-}
-
-.Blue-Shades-4-hsla {
-  color: hsla(198, 100, 92, 1);
-}
 /* Color Theme Swatches in Hex */
 .Teal-Shades-1-hex {
-  color: #011C23;
+  color: #011C23; /*darker teal*/
 }
 
 .Teal-Shades-2-hex {
-  color: #1B5562;
+  color: #1B5562; /*dark teal*/
 }
 
 .Teal-Shades-3-hex {
-  color: #63AEBF;
+  color: #63AEBF; /*teal*/
 }
 
 .Teal-Shades-4-hex {
-  color: #C4F4FF;
-}
-
-/* Color Theme Swatches in RGBA */
-.Teal-Shades-1-rgba {
-  color: rgba(1, 28, 35, 1);
-}
-
-.Teal-Shades-2-rgba {
-  color: rgba(27, 85, 98, 1);
-}
-
-.Teal-Shades-3-rgba {
-  color: rgba(99, 174, 191, 1);
-}
-
-.Teal-Shades-4-rgba {
-  color: rgba(196, 244, 255, 1);
-}
-
-/* Color Theme Swatches in HSLA */
-.Teal-Shades-1-hsla {
-  color: hsla(192, 94, 7, 1);
-}
-
-.Teal-Shades-2-hsla {
-  color: hsla(190, 56, 24, 1);
-}
-
-.Teal-Shades-3-hsla {
-  color: hsla(191, 41, 56, 1);
-}
-
-.Teal-Shades-4-hsla {
-  color: hsla(191, 100, 88, 1);
+  color: #C4F4FF; /*lighter teal*/
 }
 
 /* Color Variables */
@@ -130,6 +46,7 @@
   --teal-mid: #2D90A6;
   --green-mid: #6CA663;
 }
+
 /* 
   https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
