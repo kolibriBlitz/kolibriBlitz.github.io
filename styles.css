@@ -68,6 +68,7 @@
   --blue-light: #96C6D9;
   --teal-dark: #013440;
   --teal-mid: #2D90A6;
+  --teal-lightest: #C4F4FF;
   --green-mid: #6CA663;
   --green-light: #98E88B;
   --blue-dark-semi: #19628380;
@@ -240,7 +241,7 @@ blockquote{
 
 /*----GLOBAL LINK STYLES----*/
 a:link {
-  color: pink;
+  color: var(--teal-lightest);
 }
 
 a:hover {
@@ -248,7 +249,7 @@ a:hover {
 }
 
 a:visited {
-  color: red;
+  color: var(--teal-dark);
 }
 
 a {
