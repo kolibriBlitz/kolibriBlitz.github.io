@@ -231,24 +231,15 @@ blockquote{
 .page-container{
   display: flex;
   flex-direction: column;
-  flex: 1 0 auto;
-  /* Allow content to grow and shrink */
-  align-content: flex-start;
-  justify-content: space-evenly;
-  max-height: 100vh;
-  max-height: 100dvh;
-  max-width: 100%;
+  /*flex: 0 1 auto;*/
+  min-height: 100dvh; /*height for sticky footer*/
 }
 .content-wrapper {
   display: flex;
   flex-direction: column;
   flex: 1;
-  align-content: flex-start;
-  justify-content: space-evenly;
+  gap: 48px;/*spacing between sections*/
   padding: 12px;
-  max-height: 100vh;
-  max-height: 100dvh;
-  max-width: 100%;
 }
 
 /*----GLOBAL LINK STYLES----*/
