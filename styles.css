@@ -219,13 +219,18 @@ p {
 }
 
 li{
-  font-size: 1.6rem; /*16 px*/
+  font-size: 1.8rem; /*16 px*/
   list-style:square;
 }
 
 blockquote{
   font-size: 1.4rem;
   font-weight: 600;
+}
+
+.quote{
+  font-size: 1.2rem; /*12px*/
+  font-weight: 400;
 }
 
 .page-container{
