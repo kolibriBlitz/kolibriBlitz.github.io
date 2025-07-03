@@ -219,7 +219,7 @@ p {
 }
 
 li{
-  font-size: 1.8rem; /*16 px*/
+  font-size: 1.8rem; /*18 px*/
   list-style:square;
 }
 
@@ -262,8 +262,8 @@ a:visited {
 
 a {
   font-family: Tahoma, Verdana, sans-serif;
-  font-size: 1.6rem;
-  /* 14px */
+  font-size: 1.8rem;
+  /* 18px */
 }
 
 /*----GLOBAL FOOTER STYLES----*/
