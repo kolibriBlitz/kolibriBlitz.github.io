@@ -184,7 +184,7 @@ header p {
 header img {
   max-width: 100px;
   /* Limit the maximum width of the image */
-  height: auto;
+  /*height: auto;*/
   /* Maintain aspect ratio */
 }
 
