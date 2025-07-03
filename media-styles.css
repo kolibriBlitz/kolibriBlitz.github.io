@@ -28,7 +28,12 @@
         font-size: 1.2rem;
         /* 12px */
     }
-
+    a:link,
+    a:hover,
+    a:visited {
+        font-size: 1.6rem;
+        /* 16px */
+    }
     .portfolio-section,
     .home-section,
     .about-section,
@@ -127,7 +132,12 @@
         /*12 px*/
         line-height: 2;
     }
-
+    a:link,
+    a:hover,
+    a:visited {
+        font-size: 1.2rem;
+        /* 12px */
+    }
     .home-quote,
     .about-quote,
     .portfolio-quote,
