@@ -405,7 +405,7 @@ footer {
   border-radius: 8px;
   max-width: 100%;
   min-width: fit-content;
-  justify-content: center;
+  align-content: center;
 }
 
 .contact-section h2 {
