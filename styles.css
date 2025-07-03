@@ -191,7 +191,7 @@ header img {
 /*----GLOBAL BODY STYLES----*/
 body {
   background: url(analysis-woman-840x560.jpg) no-repeat center center fixed;
-  background-size: cover;
+  background-size: 100%;
   font-family: Tahoma, Verdana, sans-serif;
   color: #00161b;
   margin: 0;
