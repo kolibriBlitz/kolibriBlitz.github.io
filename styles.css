@@ -190,7 +190,7 @@ header img {
 
 /*----GLOBAL BODY STYLES----*/
 body {
-  background: url(analysis-woman-840x560.jpg) no-repeat center center fixed;
+  background: url(analysis-woman-840x560.jpg) no-repeat center;
   background-size: cover;
   font-family: Tahoma, Verdana, sans-serif;
   color: #00161b;
@@ -243,7 +243,7 @@ blockquote{
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 48px;/*spacing between sections*/
+  gap: 36px;/*spacing between sections*/
   padding: 12px;
 }
 
@@ -352,8 +352,8 @@ footer {
   color: var(--green-light);
 }
 
-.about-list{
-  list-style-image: url(checkmark-20px.png)
+.checklist{
+  list-style-image: url(checkmark-20px.png);
 }
 
 .about-quote {
