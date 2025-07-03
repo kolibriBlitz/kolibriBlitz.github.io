@@ -352,7 +352,7 @@ footer {
   color: var(--green-light);
 }
 
-.checklist{
+.checklist li{
   list-style-image: url(checkmark-20px.png);
 }
 
