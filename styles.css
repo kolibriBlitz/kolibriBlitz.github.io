@@ -182,9 +182,9 @@ header p {
   padding: 12px;
 }
 header img {
-  max-width: 100px;
+  max-width: 90px;
   /* Limit the maximum width of the image */
-  /*height: auto;*/
+  height: auto;
   /* Maintain aspect ratio */
 }
 
