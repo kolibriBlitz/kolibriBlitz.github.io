@@ -413,8 +413,8 @@ footer {
   padding: 12px;
   margin: 24px 36px;
   border-radius: 8px;
-  max-width: 100%;
-  min-width: fit-content;
+  /*max-width: 100%;*/
+  min-width: 100%;
   align-content: center;
 }
 
