@@ -202,6 +202,7 @@ body {
   box-sizing: border-box;
   font-size: clamp(1.2rem,2vh,1.8rem);
   line-spacing:1.2rem;
+  list-style:square;
 }
 
 h2 {
@@ -219,10 +220,10 @@ h2 {
   margin: 0 0 12px;
 }*/
 
-li{
-  font-size: 1.8rem; /*18 px*/
+/*li{
+  font-size: 1.8rem; 
   list-style:square;
-}
+}*/
 
 blockquote{
   font-size: 1.4rem;
