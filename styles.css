@@ -200,6 +200,8 @@ body {
   flex-direction: column;
   height: 100%;
   box-sizing: border-box;
+  font-size: clamp(1.2rem,2vh,1.8rem);
+  line-spacing:1.2rem;
 }
 
 h2 {
@@ -210,13 +212,12 @@ h2 {
   text-transform: uppercase;
 }
 
-p {
+/*p {
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 1.8rem;
-  /* 18px */
   line-height: 1.2;
   margin: 0 0 12px;
-}
+}*/
 
 li{
   font-size: 1.8rem; /*18 px*/
@@ -236,13 +237,13 @@ blockquote{
 .page-container{
   display: flex;
   flex-direction: column;
-  /*flex: 0 1 auto;*/
-  min-height: 100dvh; /*height for sticky footer*/
+  flex: 1;
+  min-height: 100vh; /*height for sticky footer*/
 }
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 0 1 auto;
   gap: 36px;/*spacing between sections*/
   padding: 12px;
 }
