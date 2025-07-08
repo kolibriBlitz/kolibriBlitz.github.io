@@ -184,7 +184,7 @@ header img {
 
 /*----GLOBAL BODY STYLES----*/
 body {
-  background: almond;
+  background: url("Images/kolibri-logo.png") repeat;
   background-size: cover;
   font-family: Tahoma, Verdana, sans-serif;
   color: #00161b;
@@ -194,7 +194,7 @@ body {
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
-  font-size: clamp(1.2rem,2vh,1.8rem);
+  font-size: 1.8rem;
   line-spacing:1.2rem;
   list-style:square;
 }
