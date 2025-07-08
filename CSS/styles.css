@@ -184,7 +184,7 @@ header img {
 
 /*----GLOBAL BODY STYLES----*/
 body {
-  background: url(Images/kolibri-logo.png) no-repeat center center fixed;
+  background: almond;
   background-size: cover;
   font-family: Tahoma, Verdana, sans-serif;
   color: #00161b;
