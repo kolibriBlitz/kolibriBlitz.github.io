@@ -291,12 +291,12 @@ footer {
   justify-content: center;
 }
 
-.contact img {
+.socials img {
   width: 30px;
   margin: 0 5px;
 }
 
-.contact img:hover {
+.socials img:hover {
   opacity: 0.5;
 }
 
