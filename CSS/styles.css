@@ -357,7 +357,7 @@ footer {
 }
 
 .checklist li{
-  list-style-image: url("checkmark-20px.png");
+  list-style-image: url(../Images/checkmark-20px.png);
 }
 
 .about-quote {
