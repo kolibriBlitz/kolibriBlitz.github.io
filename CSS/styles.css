@@ -246,8 +246,8 @@ blockquote{
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  flex: 0 1 auto;
-  gap: 36px;/*spacing between sections*/
+  flex: 1;
+  gap: 24px;/*spacing between sections*/
   padding: 12px;
 }
 
