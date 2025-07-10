@@ -283,9 +283,12 @@ a:visited{
 
 /*----UTILITIES----*/
 .center{
+  display:flex;
   align-text:center;
   align-items:center;
   align-content:center;
+  justify-items:center;
+  justify-content:center;
 }
 
 /*----INDEX PAGE STYLES----*/
