@@ -17,7 +17,6 @@
 }/*mid green*/
 
 /*------MONOCHROMATIC SHADES FOR TEXT------*/
-/* Color Theme Swatches in Hex */
 .Blue-Shades-1-hex {
   color: #1D3742;
 }/*darkest*/
@@ -31,7 +30,6 @@
   color: #DBF4FF;
 }/*lightest*/
 
-/* Color Theme Swatches in Hex */
 .Teal-Shades-1-hex {
   color: #011C23;
 }/*darkest*/
@@ -125,11 +123,32 @@ nav a:hover {
 }
 
 .download {
-  width:44px;
-  height: auto;
-  background: white;
-  box-shadow: 10px 10px 25px rgba(50,50,50,.5);
+  width:55px;
+  background: #C4F4FF;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 20px var(--teal-dark);
+  padding:2px 5px 2px 5px;
+  position:fixed;
+  top: 12px;
+  right:12px
+
 }
+
+a:link.download{
+  color: #011C23;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 1.4rem;
+  text-decoration: none;
+  text-align: center;
+  padding: 2px;
+ }
+
+ a:hover.download{
+  color: var(--green-mid);
+  text-decoration: underline;
+  }
+  
 .header-wrapper {
   display: flex;
   flex-direction: row;
@@ -177,18 +196,22 @@ body {
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
-  font-size: 1.8rem;
-  line-spacing:1.2rem;
+  font-size: 1.8rem; /*18px*/
+  line-height:2rem;
   list-style:square;
 }
 
-/*body::before {
+body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); 
+  background-image: linear-gradient(90deg,
+    rgba(0, 53, 53/ 30%) 20%,
+    rgba(255 255 255 / 30%) 60%,
+    rgba(0 53 53 / 30%) 80%
+  ); 
   z-index: -1;
-}*/
+}
 
 h2 {
   font-family: Tahoma, Verdana, sans-serif;
@@ -284,7 +307,7 @@ a:visited{
 /*----UTILITIES----*/
 .center{
   display:flex;
-  align-text:center;
+  text-align:center;
   align-items:center;
   align-content:center;
   justify-items:center;
@@ -330,7 +353,7 @@ a:visited{
 .about-section {
   background: var(--blue-dark-semi);
   padding: 12px;
-  margin: 24px 36px;
+  margin: 24px 72px;
   border-radius: 8px;
 }
 
