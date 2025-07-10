@@ -124,6 +124,12 @@ nav a:hover {
   color: var(--green-mid);
 }
 
+button {
+  width:44px;
+  height: auto;
+  background: white;
+  box-shadow: 10px 10px 25px rgba(50,50,50,.5);
+}
 .header-wrapper {
   display: flex;
   flex-direction: row;
