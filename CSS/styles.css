@@ -102,7 +102,7 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: left;
-  gap: 12px;
+  gap: 24px;
   padding: 72;
 }
 
@@ -124,7 +124,7 @@ nav a:hover {
   color: var(--green-mid);
 }
 
-button {
+.download {
   width:44px;
   height: auto;
   background: white;
