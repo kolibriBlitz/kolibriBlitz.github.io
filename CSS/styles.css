@@ -270,6 +270,17 @@ footer {
   justify-content: space-between;
 }
 
+/*----LINK STYLES----*/
+a:link{
+  color:var(--blue-light);
+}
+a:hover{
+  color:var(--green-mid);
+}
+a:visited{
+  color:var(--teal);
+}
+
 /*----UTILITIES----*/
 .center{
   align-text:center;
