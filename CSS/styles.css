@@ -184,7 +184,7 @@ header img {
 body {
   background: teal;
   background: radial-gradient(var(--green-light), #3f87a6);
-  background: url(../Images/analysis-woman-840x560.jpg) center fixed no-repeat;
+  background: url(../Images/analysis-woman-840x560.jpg) center center fixed no-repeat;
   background-size: cover;
   font-family: Tahoma, Verdana, sans-serif;
   color: var(--blue-light);
