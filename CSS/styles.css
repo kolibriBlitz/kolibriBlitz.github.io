@@ -2,43 +2,63 @@
 /* Color Theme Swatches in Hex */
 .colortheme_analysiswoman_colorful-1-hex {
   color: #196283;
-}/*dark blue*/
+}
+
+/*dark blue*/
 .colortheme_analysiswoman_colorful-2-hex {
   color: #96C6D9;
-}/*light blue*/
+}
+
+/*light blue*/
 .colortheme_analysiswoman_colorful-3-hex {
   color: #013440;
-}/*dark teal*/
+}
+
+/*dark teal*/
 .colortheme_analysiswoman_colorful-4-hex {
   color: #2D90A6;
-}/*teal*/
+}
+
+/*teal*/
 .colortheme_analysiswoman_colorful-5-hex {
   color: #6CA663;
-}/*mid green*/
+}
+
+/*mid green*/
 
 /*------MONOCHROMATIC SHADES FOR TEXT------*/
 .Blue-Shades-1-hex {
   color: #1D3742;
-}/*darkest*/
+}
+
+/*darkest*/
 .Blue-Shades-2-hex {
   color: #196283;
 }
+
 .Blue-Shades-3-hex {
   color: #B0E6FF;
 }
+
 .Blue-Shades-4-hex {
   color: #DBF4FF;
-}/*lightest*/
+}
+
+/*lightest*/
 
 .Teal-Shades-1-hex {
   color: #011C23;
-}/*darkest*/
-.Teal-Shades-2-hex {
-  color: #1B5562; 
 }
+
+/*darkest*/
+.Teal-Shades-2-hex {
+  color: #1B5562;
+}
+
 .Teal-Shades-3-hex {
   color: #63AEBF;
 }
+
 .Teal-Shades-4-hex {
   color: #C4F4FF;
 }
@@ -49,35 +69,41 @@
   --blue-light: #96C6D9;
   --teal-dark: #013440;
   --teal-mid: #2D90A6;
-  --teal-lightest:#C4F4FF;
+  --teal-lightest: #C4F4FF;
   --green-mid: #6CA663;
   --green-light: #80C375;
-  --green-lightest:#92DF86;
-  --teal-darkest-semi:#011C2390;/* Semi-transparent dark teal */
-  --blue-dark-semi: #19628380;/* Semi-transparent dark blue */
-  --green-mid-semi: #6CA66380;/* Semi-transparent light green */
-  --contrast-teal-lightest:#DB7056;
-  --contrast-blue-light:#D9B996;
+  --green-lightest: #92DF86;
+  --teal-darkest-semi: #011C2390;
+  /* Semi-transparent dark teal */
+  --blue-dark-semi: #19628380;
+  /* Semi-transparent dark blue */
+  --green-mid-semi: #6CA66380;
+  /* Semi-transparent light green */
+  --contrast-teal-lightest: #DB7056;
+  --contrast-blue-light: #D9B996;
   /* LIGHT-DARK THEMES */
   color-scheme: light dark;
 
-  --light-sect-bg:var(--teal-darkest-semi);
-  --light-color:var(--blue-light);
-  --light-h2:var(--green-light);
+  --light-sect-bg: var(--teal-darkest-semi);
+  --light-color: var(--blue-light);
+  --light-h2: var(--green-light);
 
-  --dark-sect-bg:var(--green-lightest);
-  --dark-color:var(--teal-dark);
-  --dark-h2:var(--blue-mid);
-  }
-  * {
-    color:light-dark(var(var(--light-color),var(var(--dark-color))));
-  }
-  h2{
-    color:light-dark(var(var(--light-h2), var(var(--dark-h2))));
-  }
-  section{
-    background: light-dark(var(--light-sect-bg), var(--dark-sect-bg));
-  }
+  --dark-sect-bg: var(--green-lightest);
+  --dark-color: var(--teal-dark);
+  --dark-h2: var(--blue-mid);
+}
+
+* {
+  color: light-dark(var(var(--light-color), var(var(--dark-color))));
+}
+
+h2 {
+  color: light-dark(var(var(--light-h2), var(var(--dark-h2))));
+}
+
+section {
+  background: light-dark(var(--light-sect-bg), var(--dark-sect-bg));
+}
 
 /*----GLOBAL STYLES----*/
 /* 
@@ -158,7 +184,8 @@ nav a:hover {
 header h1 {
   color: #011C23;
   font-family: "Ink Free", "Papyrus", fantasy;
-  font-size: 6.4rem; /* 64px */
+  font-size: 6.4rem;
+  /* 64px */
   font-weight: bolder;
   margin: 0;
   padding: 12px;
@@ -169,23 +196,23 @@ header p {
   font-family: "Ink Free",
     "Papyrus",
     fantasy;
-  font-size: 2.8rem;/* 28px */
+  font-size: 2.8rem;
+  /* 28px */
   font-style: oblique;
   font-weight: bold;
   margin: 0;
   padding: 12px;
 }
+
 header img {
-  max-width: 90px;/* Limit the maximum width of the image */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 90px;
+  /* Limit the maximum width of the image */
+  height: auto;
+  /* Maintain aspect ratio */
 }
 
 /*----GLOBAL BODY STYLES----*/
 body {
-  background: teal;
-  background: radial-gradient(var(--green-light), #3f87a6);
-  background: url(../Images/analysis-woman-840x560.jpg) center center fixed no-repeat;
-  background-size: cover;
   font-family: Tahoma, Verdana, sans-serif;
   color: var(--blue-light);
   margin: 0;
@@ -194,14 +221,16 @@ body {
   flex-direction: column;
   height: 100vh;
   box-sizing: border-box;
-  font-size: 1.8rem; /*18px*/
-  line-height:2rem;
-  list-style:square;
+  font-size: 1.8rem;
+  /*18px*/
+  line-height: 2rem;
+  list-style: square;
 }
 
 h2 {
   font-family: Tahoma, Verdana, sans-serif;
-  font-size: 2.4rem;/* 24px */
+  font-size: 2.4rem;
+  /* 24px */
   margin: 0 0 12px;
   text-transform: uppercase;
 }
@@ -223,6 +252,7 @@ section h2 {
   color: var(--green-light);
   text-decoration: wavy underline var(--teal-mid);
 }
+
 /*p {
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 1.8rem;
@@ -230,28 +260,36 @@ section h2 {
   margin: 0 0 12px;
 }*/
 
-li{
-  font-size: 1.8rem; 
-  list-style:square;
+li {
+  font-size: 1.8rem;
+  list-style: square;
 }
 
-blockquote{
+blockquote {
   font-size: 1.4rem;
   font-weight: 600;
 }
 
-.page-container{
+.page-container {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-height: 100vh; /*height for sticky footer*/
+  min-height: 100vh;
+  /*height for sticky footer*/
+
 }
+
 .content-wrapper {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 24px;/*spacing between sections*/
+  gap: 24px;
+  /*spacing between sections*/
   padding: 12px;
+  background: teal;
+  background: radial-gradient(var(--green-light), #3f87a6);
+  background: url(../Images/analysis-woman-840x560.jpg) center fixed no-repeat;
+  background-size: cover;
 }
 
 /*----FOOTER STYLES----*/
@@ -272,29 +310,32 @@ footer {
 
 
 /*----LINK STYLES----*/
-a:link{
-  color:var(--teal-lightest);
+a:link {
+  color: var(--teal-lightest);
 }
-a:hover{
-  color:var(--green-mid);
+
+a:hover {
+  color: var(--green-mid);
 }
-a:visited{
-  color:var(--contrast-teal-lightest);
+
+a:visited {
+  color: var(--contrast-teal-lightest);
 }
 
 /*---- LAYOUT UTILITIES----*/
-.center{
+.center {
   display: flex;
   flex-wrap: wrap;
-  text-align:center;
-  align-items:center;
-  align-content:center;
-  justify-items:center;
-  justify-content:center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
 }
+
 .fit {
   width: fit-content;
-  margin:auto;
+  margin: 24px 72px;
   padding-inline: 2rem;
   max-width: 80%;
 }
@@ -381,7 +422,7 @@ a:hover.download {
 /* Styles to come */
 
 /* ABOUT PAGE */
-.checklist li{
+.checklist li {
   list-style-image: url(../Images/icon-check-circle.png);
 }
 

@@ -8,8 +8,8 @@
     }
 
     header h1 {
-        font-size: 5rem;
-        /* 50px */
+        font-size: 4.6rem;
+        /* 46px */
     }
 
     header p {
@@ -72,6 +72,12 @@
 }
 
 @media screen and (max-width: 517px) {
+
+    .content-wrapper {
+        display: block;
+        background-position: top center;
+    }
+
     header h1 {
         font-size: 3rem;
         /*30px*/
@@ -93,9 +99,12 @@
         line-height: 3rem;
 
     }
-nav a:link{
-    font-size: 1.4rem; /* 14px */
-}
+
+    nav a:link {
+        font-size: 1.4rem;
+        /* 14px */
+    }
+
     a:link,
     a:hover,
     a:visited {
@@ -124,7 +133,19 @@ nav a:link{
         line-height: 2;
         margin: 0;
     }
-        .download {
-            top: 20rem;
-            /* moves "button" beneath header */   }
+
+    .download {
+        top: 20rem;
+        /* moves "button" beneath header */
+        z-index: 1;
+        /* keeps button on top on very narrow screens */
+    }
+
+    audio {
+        display: block;
+    }
+
+    .center {
+        margin: 24px 72px;
+    }
 }
