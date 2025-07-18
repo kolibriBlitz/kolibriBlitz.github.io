@@ -14,4 +14,4 @@ This project artifact outlines the objectives and key results, scope, and timeli
 * Identifies project milestones
 * Defines project scope using MoCoW analysis
 
-The [full project plan](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Documents/AP-portfolio-analysis-projects-plan.pdf) is here.
+> The [full project plan](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Documents/AP-portfolio-analysis-projects-plan.pdf) is here.
