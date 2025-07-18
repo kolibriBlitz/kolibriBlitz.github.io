@@ -24,4 +24,4 @@ This project artifact outlines the scope, goals, and strategic considerations fo
 * Defines the scope
 * Documents high-level risks and assumptions for the project
 
-The [full project charter](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Documents/AP-analyst-portfolio-charter.pdf) is here.
+> The [full project charter](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Documents/AP-analyst-portfolio-charter.pdf) is here.
