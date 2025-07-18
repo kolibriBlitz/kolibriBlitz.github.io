@@ -437,4 +437,8 @@ a:hover.download {
 /* Styles to come */
 
 /* CONTACT PAGE */
-
+.contact li{
+  list-style: none;
+  line-height: 2.8rem;
+  
+}
