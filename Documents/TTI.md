@@ -6,6 +6,6 @@ As part of working with a career coach to help me through this time of transitio
   * Steadiness
   * Compliance
 * 12 Driving Forces(https://ttisi.com/assessments/12-driving-forces): Why a person does what they do.
-The results help me clarify my goals and play to my strengths.
+<br>The results help me clarify my goals and play to my strengths.
 Read on for [more information on the assessments](https://www.ttisi.com/assessments) or [the research](https://www.ttiresearch.com/) behind them.
 My [test results]([https:](https://github.com/kolibriBlitz/kolibriBlitz.github.io/edit/main/Documents/TTI.pdf) are here.
