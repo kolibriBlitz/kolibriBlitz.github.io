@@ -14,4 +14,4 @@ This project artifact outlines the scope, goals, requirements and milestones for
  * Assumptions
  * Success Metrics
 
-The [full product plan](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Documents/AP-portfolio-website-plan.pdf) is here.
+The [full product documentation](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Documents/AP-portfolio-website-plan.pdf) is here.
