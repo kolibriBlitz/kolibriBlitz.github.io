@@ -1,27 +1,17 @@
-# Product Plan
-This project artifact outlines the scope, goals, and strategic considerations for a portfolio project focused on business and data analysis.
+# Product Requirements Documentation
+This project artifact outlines the scope, goals, requirements and milestones for a portfolio project focused on building a functional website.
 ## Purpose
-* Formally authorize a project
-* State the project goal(s)
-* Identify the project stakeholders and leadership team
-* Allocate authorized resources
-  * Budget
-  * Human resources
-  * Internal/external documentation
-* State project milestones
-* Define the scope
-* Document high-level risks and assumptions for the project
+* Record product requirements
+* Define other product information
+* Identify whatever is required to manage the requirements
 
 ## Application to Portfolio Project
-* Formally documents my project
-* States the project goal(s)
-* Identifies the project stakeholders
-  * Applies use of personas
-* Allocates authorized resources
-  * Budget
-  * Internal/external documentation
-* States project milestones
-* Defines the scope
-* Documents high-level risks and assumptions for the project
+* Records my product requirements
+* Defines the scope of the product
+* Identifies other information about the requirements such as:
+ * Objectives
+ * Milestones
+ * Assumptions
+ * Success Metrics
 
 The [full product plan](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Documents/AP-portfolio-website-plan.pdf) is here.
