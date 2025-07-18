@@ -339,6 +339,12 @@ a:visited {
   padding-inline: 2rem;
   max-width: 80%;
 }
+.grid{
+  display:grid;
+}
+.no-bg {
+  background: none;
+}
 
 /*----COMPONENT UTILITIES----*/
 /* Download Button */
@@ -432,6 +438,3 @@ a:hover.download {
 
 /* CONTACT PAGE */
 
-.qr {
-  background: none;
-}
