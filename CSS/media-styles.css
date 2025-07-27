@@ -4,7 +4,8 @@
     .header-wrapper {
         padding: 8px;
         text-align: center;
-        max-width: 100%;
+        justify-content: space-evenly;
+        gap:0;
     }
 
     header h1 {
@@ -19,7 +20,7 @@
     }
 
     header img {
-        max-width: 75px;
+        max-width: 20vw;
     }
 
     nav a:link,
@@ -51,20 +52,20 @@
         border-radius: 12px;
     }
 
-    .quote p {
+    /*.quote p {
         font-size: 1.4rem;
-        /* 14px */
+    
         line-height: 1.5;
         margin: 0;
     }
 
     blockquote {
         font-size: 1.4rem;
-        /* 14px */
+        
         line-height: 1.5;
         margin: 0;
     }
-
+*/
 
     footer p {
         font-size: 1.2rem;
@@ -82,20 +83,19 @@
         display: block;
         background-position: top center;
     }
-
+/*
     header h1 {
         /*font-size: 3rem;*/
-        /*30px*/
-    }
+        
 
     header p {
         /*font-size: 1.5rem;*/
-        /*15px*/
+        
         font-weight: 400;
-    }
+    }*/
 
     header img {
-        max-width: 50px;
+        max-width: 20vw;
     }
 
     section {
@@ -126,16 +126,12 @@
     }
 
     .quote p {
-        font-size: 1.2rem;
-        /* 12px */
-        line-height: 2;
+        
         margin: 0;
     }
 
     blockquote {
-        font-size: 1.2rem;
-        /* 12px */
-        line-height: 2;
+        
         margin: 0;
     }
 
