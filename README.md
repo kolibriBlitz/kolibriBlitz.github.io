@@ -8,18 +8,18 @@ Visitors can explore:
 - Data visualizations and dashboards
 - Embedded audio and visuals
 
-This project highlights my skills in front-end structure, technical documentation, and organizing professional assets for external audiences, as well as my adaptability and rapid learning.
+This project highlights my skills in front-end development, technical documentation, and organizing professional assets for external audiences. It also reflects my adaptability and rapid learning in unfamiliar tech environments.
 
-## Filing System
-### [Audio](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Audio)
-Audio files used in my website.
-### [CSS](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/CSS)
-CSS style sheets.
-### [Documentation](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Documentation)
-All the markdown files for the documents linked on my website.
-### [Documents](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Documents)
-Document files used in my website.
-### [Images](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Images)
-Image files used in my website.
-### No Folder
+## Project Structure
+- ### [Audio](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Audio)
+Audio files used in the website.
+- ### [CSS](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/CSS)
+Style sheets for the website.
+- ### [Documentation](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Documentation)
+Markdown files for all linked documents.
+- ### [Documents](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Documents)
+Document files featured on the website.
+- ### [Images](https://github.com/kolibriBlitz/kolibriBlitz.github.io/tree/main/Images)
+Image assets.
+- ### Root Directory
 The HTML files.
