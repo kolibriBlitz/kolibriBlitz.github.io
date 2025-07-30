@@ -333,7 +333,7 @@ a:visited {
 
 /*----TEXT UTILITIES----*/
 h1{
-  font-size: clamp(1.2rem, 8.5vw,7.2rem);
+  font-size: clamp(1.2rem, 8vw,7.2rem);
   line-height: clamp(2rem,3vh,3rem);
 }
 h2, h3 {
