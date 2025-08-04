@@ -20,22 +20,22 @@
     }
 
     header img {
-        max-width: 20vw;
+        max-width: 18vw;
     }
 
-    nav a:link,
+    /*nav a:link,
     a:hover,
     a:visited {
         font-size: 1.6rem;
-        /* 12px */
+       
     }
 
     a:link,
     a:hover,
     a:visited {
         font-size: 1.6rem;
-        /* 16px */
-    }
+       
+    }*/
 
     section {
         flex-direction: column;
@@ -95,7 +95,7 @@
     }*/
 
     header img {
-        max-width: 20vw;
+        max-width: 16vw;
     }
 
     section {
@@ -105,17 +105,17 @@
 
     }
 
-    nav a:link {
+    /*nav a:link {
         font-size: 1.4rem;
-        /* 14px */
+        
     }
 
     a:link,
     a:hover,
     a:visited {
         font-size: 1.4rem;
-        /* 14px */
-    }
+     
+    }*/
 
     .quote {
         min-width: 50%;
