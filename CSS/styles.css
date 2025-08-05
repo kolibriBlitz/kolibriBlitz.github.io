@@ -380,7 +380,7 @@ a{
 
 }
 /* LinkedIn Button */
-a .libutton {
+a.libutton {
   display: flex;
   flex-direction: column;
   justify-content: center;
