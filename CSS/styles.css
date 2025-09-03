@@ -225,8 +225,6 @@ body {
   list-style: square;
 }
 
-
-
 section {
   display: flex;
   flex-direction: column;
@@ -250,8 +248,6 @@ li {
   /*font-size: 1.8rem;*/
   list-style: square;
 }
-
-
 
 .page-container {
   display: flex;
@@ -329,6 +325,11 @@ a:visited {
   background: none;
 }
 
+.none {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
 
 
 /*----TEXT UTILITIES----*/
