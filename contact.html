@@ -3,56 +3,83 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L57RTFC3LQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L57RTFC3LQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-L57RTFC3LQ');
-</script>
+        gtag('config', 'G-L57RTFC3LQ');
+    </script>
     <meta charset="UTF-8">
     <meta name="description" content="Melisande Fritzsche's contact information.">
-  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Melisande Fritzsche | Business Analyst, Operations & Systems Analyst, Strategy Analyst</title>
     <link rel="icon" type="image/x-icon" href="Images/logo-kolibri-nobackground.png">
+    <link rel="stylesheet" href="CSS/tokens.css">
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="CSS/media-styles.css"> <!--styling for smaller screens-->
+    <link rel="stylesheet" href="CSS/nav-styles.css">
+    <link rel="stylesheet" href="CSS/media-styles.css"> <!--styles for smaller screens-->
+    <link rel="stylesheet" href="CSS/hero.css">
+    <script src="js/nav.js" defer></script>
+    <script src="js/theme.js" defer></script>
 </head>
 
-
-
 <body class="contact">
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMD6W462" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!--Global Header-->
-    <header>
-        <!--Navigation Menu-->
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-        </nav>
-        <!--Logo and Header Content-->
-        <div class="header-wrapper">
-            <img src="Images/logo-kolibri-nobackground.png"
-                alt="My logo, a black origami hummingbird pierced by a rainbow lightning bolt">
+    <button class="theme-toggle" aria-label="Switch display mode">
+        <svg class="sun-and-moon" aria-hidden="true" viewBox="0 0 24 24">
+            <mask class="moon" id="moon-mask">
+                <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                <circle cx="7" cy="6" r="6" fill="black" />
+            </mask>
+            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+            <g class="sun-beams">
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </g>
+        </svg>
+    </button>
 
-            <hgroup>
-                <h1>Melisande&nbsp;Fritzsche</h1>
-                <p>I find solutions to business problems.</p>
-            </hgroup>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <!--Navigation Menu-->
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Toggle menu</span>
+    </button>
+    <div class="nav-overlay"></div>
+    <nav class="nav" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html" aria-current="page">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Get in Touch</h1>
+            <p class="hero-tagline">Let's connect and collaborate.</p>
+            <div class="hero-buttons">
+                <a href="mailto:melisande.fritzsche@gmail.com" class="hero-button primary">Send Email</a>
+                <a href="https://www.linkedin.com/in/melisandefritzsche" class="hero-button secondary"
+                    target="_blank">Connect on LinkedIn</a>
+            </div>
         </div>
-        <a class="download" href="Documents/BA-base-v4.6.pdf" title="My Resume"
-            download="Melisande Fritzsche Resume"><img src="Images/icon-pdf.png" alt="" width="40px">My Resume</a>
     </header>
     <!--End Global Header-->
     <!--Page Container-->
@@ -65,15 +92,21 @@
                 <p>💻🌐🖥</p>
                 <ul class="none">
                     <li>
-                        <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=melisandefritzsche" target="_blank">Follow on LinkedIn</a>
+                        <a class="libutton"
+                            href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=melisandefritzsche"
+                            target="_blank">Follow on LinkedIn</a>
                     </li>
                     <li>
-                        <a class="ghbutton" href="https://www.github.com/kolibriBlitz" target="_blank">Collab on GitHub</a>
+                        <a class="ghbutton" href="https://www.github.com/kolibriBlitz" target="_blank">Collab on
+                            GitHub</a>
                     </li>
                 </ul>
                 <p>You can contact me directly by <a href="mailto:melisande.fritzsche@gmail.com">email</a></p>
             </section>
-            <section class="center no-bg qr"><img srcset="Images/my-linkedin-qr-code-203x203.jpg 203w, Images/my-linkedin-qr-code-405x405.jpg 405w, Images/my-linkedin-qr-code-810x810.jpg 810w" sizes="(width <= 500px) 203px, (width <= 800px) 405px, 810px" src="Images/my-linkedin-qr-code-810x810.jpg" alt="My LinkedIn QR Code">
+            <section class="center no-bg qr"><img
+                    srcset="Images/my-linkedin-qr-code-203x203.jpg 203w, Images/my-linkedin-qr-code-405x405.jpg 405w, Images/my-linkedin-qr-code-810x810.jpg 810w"
+                    sizes="(width <= 500px) 203px, (width <= 800px) 405px, 810px"
+                    src="Images/my-linkedin-qr-code-810x810.jpg" alt="My LinkedIn QR Code">
             </section>
             <section class="quote center fit">
 
@@ -101,12 +134,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-

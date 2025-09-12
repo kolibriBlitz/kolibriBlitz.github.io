@@ -4,51 +4,82 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L57RTFC3LQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L57RTFC3LQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-L57RTFC3LQ');
-</script>
+        gtag('config', 'G-L57RTFC3LQ');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Melisande Fritzsche's business analysis, data analysis and project management projects.">
+    <meta name="description"
+        content="Melisande Fritzsche's business analysis, data analysis and project management projects.">
     <title>About | Melisande Fritzsche | Business Analyst, Operations & Systems Analyst, Strategy Analyst</title>
     <link rel="icon" type="image/x-icon" href="Images/logo-kolibri-nobackground.png">
+    <link rel="stylesheet" href="CSS/tokens.css">
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="CSS/media-styles.css"> <!--styling for smaller screens-->
+    <link rel="stylesheet" href="CSS/nav-styles.css">
+    <link rel="stylesheet" href="CSS/media-styles.css"> <!--styles for smaller screens-->
+    <link rel="stylesheet" href="CSS/hero.css">
+    <script src="js/nav.js" defer></script>
+    <script src="js/theme.js" defer></script>
 </head>
 
-
-
-    
 <body class="about">
-    
-    <!--Global Header-->
-    <header>
-        <!--Navigation Menu-->
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-        </nav>
-        <!--Logo and Header Content-->
-        <div class="header-wrapper">
-            <img src="Images/logo-kolibri-nobackground.png"
-                alt="My logo, a black origami hummingbird pierced by a rainbow lightning bolt">
+    <button class="theme-toggle" aria-label="Switch display mode">
+        <svg class="sun-and-moon" aria-hidden="true" viewBox="0 0 24 24">
+            <mask class="moon" id="moon-mask">
+                <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                <circle cx="7" cy="6" r="6" fill="black" />
+            </mask>
+            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+            <g class="sun-beams">
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </g>
+        </svg>
+    </button>
 
-            <hgroup>
-                <h1>Melisande&nbsp;Fritzsche</h1>
-                <p>I find solutions to business problems.</p>
-            </hgroup>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <!--Navigation Menu-->
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Toggle menu</span>
+    </button>
+    <div class="nav-overlay"></div>
+    <nav class="nav" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" aria-current="page">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>About Me</h1>
+            <p class="hero-tagline">I find solutions to business problems.</p>
+            <p class="hero-description">
+                Detail-oriented professional driven by a desire to solve problems and make things better.
+            </p>
+            <div class="hero-buttons">
+                <a href="Documents/BA-base-v4.6.pdf" class="hero-button primary"
+                    download="Melisande Fritzsche Resume">Download Resume</a>
+                <a href="portfolio.html" class="hero-button secondary">View My Projects</a>
+            </div>
         </div>
-        <a class="download" href="Documents/BA-base-v4.6.pdf" title="My Resume" download="Melisande Fritzsche Resume"><img
-                src="Images/icon-pdf.png" alt="" width="40px">My Resume</a>
     </header>
 
     <!---Main Content-->
@@ -70,7 +101,8 @@
                     <audio controls src="Audio/my-name-pronunciation.mp3" preload="metadata"
                         alt="Audio pronunciation of my name Melisande Fritzsche"
                         title="Audio pronunciation of my name Melisande Fritzsche">
-                        <a href="my-name-pronunciation.mp3" download="Melisande Fritzsche Pronunciation.mp3">Browser not playing
+                        <a href="my-name-pronunciation.mp3" download="Melisande Fritzsche Pronunciation.mp3">Browser not
+                            playing
                             nice? Download the mp3 file.</a>
                     </audio>
                 </p>
