@@ -30,7 +30,7 @@
     --light-link-visited: var(--contrast-teal-lightest);
     --light-main-bg: var(--blue-light);
     --dark-sect-bg: var(--green-lightest);
-    --dark-color: var(--teal-dark);
+    --dark-color: var(--blue-mid);
     --dark-h2: var(--green-mid);
     --dark-link: var(--blue-light);
     --dark-link-hover: var(--green-mid);
