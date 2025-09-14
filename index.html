@@ -26,6 +26,7 @@
     <script src="js/nav.js" defer></script>
     <script src="js/theme.js" defer></script>
     <script src="js/scrollToTop.js" defer></script>
+    <script src="js/footer.js" defer></script>
 </head>
 
 <body class="home">
@@ -125,15 +126,45 @@
         </main>
 
         <!--Global Footer-->
-        <footer>
-            <p class="socials"> <a href="mailto:melisande.fritzsche@gmail.com"><img src="Images/icon-email.png"
-                        alt="Email Melisande Fritzsche"></a> <a href="https://www.linkedin.com/in/melisandefritzsche"
-                    target="_blank"><img src="Images/icon-logo-linkedin.png"
-                        alt="Visit Melisande Fritzsche's LinkedIn page"></a></p>
+        <footer role="contentinfo" aria-label="Site footer">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <h3>Melisande Fritzsche</h3>
+                    <p class="footer-tagline">In the business of better</p>
+                    <p class="footer-description">Business Analyst • Operations & Systems Analyst • Strategy Analyst</p>
+                </div>
 
-            <div class="copy">
-                <p>&copy; 2025 Melisande Fritzsche</p>
-                <p>Last updated: <time datetime="2025-09-02"></time>September 2, 2025</p>
+                <div class="footer-section footer-nav">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="portfolio.html#SQL">SQL Projects</a></li>
+                            <li><a href="portfolio.html#Python">Python Projects</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-section footer-connect">
+                    <h4>Let's Connect</h4>
+                    <div class="footer-socials">
+                        <a href="mailto:melisande.fritzsche@gmail.com" aria-label="Email Melisande Fritzsche">
+                            <img src="Images/icon-email.png" alt="" width="32" height="32">
+                            <span>Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/melisandefritzsche" target="_blank" rel="noopener"
+                            aria-label="Visit Melisande Fritzsche's LinkedIn profile">
+                            <img src="Images/icon-logo-linkedin.png" alt="" width="32" height="32">
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Melisande Fritzsche. All rights reserved.</p>
+                <p>Last updated: <time id="last-updated" datetime="">Loading...</time></p>
             </div>
         </footer>
     </div>

@@ -25,6 +25,7 @@
     <script src="js/nav.js" defer></script>
     <script src="js/theme.js" defer></script>
     <script src="js/scrollToTop.js" defer></script>
+    <script src="js/footer.js" defer></script>
 </head>
 
 <body class="portfolio">
@@ -75,7 +76,8 @@
                 Explore my projects in business analysis, data analysis, and project management.
             </p>
             <div class="hero-buttons">
-                <a href="Documents/BA-base-v4.6.pdf" download="Melisande Fritzsche Analyst Resume" class="hero-button primary">Download Resume</a>
+                <a href="Documents/BA-base-v4.6.pdf" download="Melisande Fritzsche Analyst Resume"
+                    class="hero-button primary">Download Resume</a>
                 <a href="#data-analysis" class="hero-button secondary">Data Analysis</a>
             </div>
         </div>
@@ -131,7 +133,7 @@
             </section>
             <section>
                 <h2 id="data-analysis">Data Analysis Projects </h2>
-                <h3>Restaurant Orders - SQL</h3>
+                <h3 id="SQL">Restaurant Orders - SQL</h3>
                 <p>A fictitious restaurant retained my services to analyze their menu and order data for the first
                     quarter. They want to increase revenue and improve profits. <small>Data sourced from <a
                             href="https://www.mavenanalytics.io" target="_blank" rel="noopener noreferrer"><small>Maven
@@ -152,11 +154,12 @@
                         target="_blank">Visualizations</a>: Exported PDF file of the Power BI presentation.<br>
                     <a href="https://public.tableau.com/app/profile/melisande.fritzsche/viz/OrderInsights/Pricing?publish=yes"
                         target="_blank">Dashboard</a>: Dashboard created using Tableau and hosted on Tableau Public.
+                    <br>
                     <a href="https://github.com/kolibriBlitz/SQL_Projects/blob/main/deliverables/memo.txt"
                         target="_blank">Documents</a>: Writing samples.
                 </p>
 
-                <h3>Goodreads Book Recommendations - Python</h3>
+                <h3 id="Python">Goodreads Book Recommendations - Python</h3>
                 <p>Maven Bookshelf Challenge: Design a tool using Goodreads data to build a summer reading list tailored
                     to anyone's unique tastes. <small>Data sourced from <a href="https://www.mavenanalytics.io"
                             target="_blank" rel="noopener noreferrer"><small>Maven Analytics</small></a>.</small></p>
@@ -225,15 +228,45 @@
         </main>
 
         <!--Global Footer-->
-        <footer>
-            <p class="socials"> <a href="mailto:melisande.fritzsche@gmail.com"><img src="Images/icon-email.png"
-                        alt="Email Melisande Fritzsche"></a> <a href="https://www.linkedin.com/in/melisandefritzsche"
-                    target="_blank"><img src="Images/icon-logo-linkedin.png"
-                        alt="Visit Melisande Fritzsche's LinkedIn page"></a></p>
+        <footer role="contentinfo" aria-label="Site footer">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <h3>Melisande Fritzsche</h3>
+                    <p class="footer-tagline">In the business of better</p>
+                    <p class="footer-description">Business Analyst • Operations & Systems Analyst • Strategy Analyst</p>
+                </div>
 
-            <div class="copy">
-                <p>&copy; 2025 Melisande Fritzsche</p>
-                <p>Last updated: <time datetime="2025-09-02"></time>September 2, 2025</p>
+                <div class="footer-section footer-nav">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="portfolio.html#SQL">SQL Projects</a></li>
+                            <li><a href="portfolio.html#Python">Python Projects</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-section footer-connect">
+                    <h4>Let's Connect</h4>
+                    <div class="footer-socials">
+                        <a href="mailto:melisande.fritzsche@gmail.com" aria-label="Email Melisande Fritzsche">
+                            <img src="Images/icon-email.png" alt="" width="32" height="32">
+                            <span>Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/melisandefritzsche" target="_blank" rel="noopener"
+                            aria-label="Visit Melisande Fritzsche's LinkedIn profile">
+                            <img src="Images/icon-logo-linkedin.png" alt="" width="32" height="32">
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Melisande Fritzsche. All rights reserved.</p>
+                <p>Last updated: <time id="last-updated" datetime="">Loading...</time></p>
             </div>
         </footer>
     </div>
