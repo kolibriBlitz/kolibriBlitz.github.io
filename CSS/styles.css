@@ -42,10 +42,11 @@ body {
   align-items: center;
   justify-content: space-evenly;
   padding: 2rem;
-  position: relative;
+  position: sticky;
+  top: 0;
   overflow: hidden;
   background: linear-gradient(135deg, var(--teal-dark) 0%, var(--blue-mid) 100%);
-  z-index: 1;
+  z-index: 100;
 }
 
 @keyframes float {
@@ -510,6 +511,50 @@ a:hover.download {
 
 }
 
-.qr img {
-  height: clamp(50%, 500vw, 70%)
+
+
+/*----SCROLL TO TOP BUTTON----*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 1003;
+  background: var(--teal-dark);
+  color: var(--blue-light);
+  border: 2px solid var(--blue-light);
+  border-radius: 50%;
+  width: 3.6rem;
+  height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  opacity: 0.95;
+}
+.scroll-to-top .scroll-top-svg {
+  display: block;
+  margin: auto;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.scroll-to-top .scroll-top-circle {
+  stroke: var(--blue-light);
+  transition: stroke 0.3s, fill 0.3s;
+}
+.scroll-to-top .scroll-top-arrow {
+  transition: stroke 0.3s;
+}
+.scroll-to-top:hover {
+  background: var(--green-lightest);
+  color: var(--teal-dark);
+  box-shadow: 0 8px 24px rgba(255,255,255,0.4);
+  transform: translateY(-4px) scale(1.08);
+}
+.scroll-to-top:hover .scroll-top-circle {
+  stroke: var(--teal-dark);
+}
+.scroll-to-top:hover .scroll-top-arrow {
+  stroke: var(--teal-dark);
 }
