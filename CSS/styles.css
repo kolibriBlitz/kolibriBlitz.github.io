@@ -121,7 +121,7 @@ body {
   justify-content: space-evenly;
   gap: 1rem;
   padding: 0 120px;
-  
+
 }
 
 .hero h1 {
@@ -274,15 +274,12 @@ li {
   gap: 3vh;
   /*spacing between sections*/
   padding: 12px;
-  background: teal;
-  background: radial-gradient(var(--green-light), #3f87a6);
-  background: url(../Images/analysis-woman-840x560.jpg) center center fixed no-repeat;
-  background-size: cover;
+  background: light-dark(var(--light-main-bg), var(--dark-main-bg));
 }
 
 /*----FOOTER STYLES----*/
 footer {
-  background:linear-gradient(200deg, var(--teal-dark) 0%, var(--blue-mid) 100%);
+  background: linear-gradient(200deg, var(--teal-dark) 0%, var(--blue-mid) 100%);
   color: var(--blue-light);
   padding: 3rem 0 1.5rem;
   margin-top: auto;

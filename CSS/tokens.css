@@ -28,12 +28,14 @@
     --light-link: var(--teal-mid);
     --light-link-hover: var(--green-light);
     --light-link-visited: var(--contrast-teal-lightest);
+    --light-main-bg: var(--blue-light);
     --dark-sect-bg: var(--green-lightest);
     --dark-color: var(--teal-dark);
     --dark-h2: var(--green-mid);
     --dark-link: var(--blue-light);
     --dark-link-hover: var(--green-mid);
     --dark-link-visited: var(--contrast-blue-light);
+    --dark-main-bg: var(--teal-dark);
 
     /* Navigation Theme Colors */
     --nav-link: var(--teal-lightest);

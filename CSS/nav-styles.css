@@ -46,7 +46,12 @@
 }
 
 .nav {
-    background: var(--teal-dark);
+    background:
+        linear-gradient(315deg,
+            #C4F4FF85 0%,
+            #013440 67%),
+        url(../Images/analysis-woman-840x560.jpg) center center fixed no-repeat;
+    background-size: auto, cover;
     position: fixed;
     top: 0;
     left: 0;
