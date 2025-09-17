@@ -247,12 +247,6 @@ section {
 
 }
 
-section h2 {
-  border-bottom: var(--teal-dark) dashed 0;
-  text-decoration: wavy underline var(--teal-mid);
-  text-transform: uppercase;
-}
-
 li {
   /*font-size: 1.8rem;*/
   list-style: square;
@@ -626,7 +620,7 @@ a:hover.download {
 }
 
 .intro-section p {
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
   line-height: 1.6;
 }
 
@@ -692,7 +686,7 @@ a:hover.download {
 }
 
 .project-content p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   margin: 0;
 }
@@ -753,7 +747,7 @@ a:hover.download {
 
 .human-element p {
   color: var(--teal-dark);
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   line-height: 1.6;
 }
 
