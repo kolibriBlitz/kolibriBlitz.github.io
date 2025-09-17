@@ -23,11 +23,23 @@
     <link rel="stylesheet" href="CSS/nav-styles.css">
     <link rel="stylesheet" href="CSS/media-styles.css"> <!--styles for smaller screens-->
     <link rel="stylesheet" href="CSS/hero.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <script src="js/nav.js" defer></script>
     <script src="js/theme.js" defer></script>
     <script src="js/scrollToTop.js" defer></script>
     <script src="js/footer.js" defer></script>
     <script src="js/quotes.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                offset: 100
+            });
+        });
+    </script>
 </head>
 
 <body class="home">
@@ -76,8 +88,7 @@
             <h1>Melisande Fritzsche</h1>
             <p class="hero-tagline">I'm in the business of better.</p>
             <p class="hero-description">
-                I'm an analyst who creates solutions to business problems and turns challenges into opportunities. Just
-                like this website — built from the ground up because I saw an opportunity to learn and grow.
+                I'm an analyst who creates solutions to business problems and turns challenges into opportunities.
             </p>
             <div class="hero-buttons">
                 <a href="Documents/BA-base-v4.6.pdf" class="hero-button primary"
@@ -88,39 +99,97 @@
     </header>
     <div class="page-container">
         <main class="content-wrapper">
-            <section>
-                <h2><span lang="de">Wilkommen</span>, <span lang="fr">Bienvenue</span>, Welcome</h2>
-                <p>Hello!</p>
-                <p>I am Melisande Fritzsche and I am in the business of better. I created this website to show everyone,
-                    especially those looking to grow their team, what I'm capable of. For example, even though my
-                    passion isn't web development, I built this site from the ground up by using the resources at <a
-                        href="https://www.linkedin.com/learning" target="_blank">LinkedIn Learning</a>, <a
-                        href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> and <a
-                        href="https://www.w3.org/" target="_blank">W3C</a> &mdash; not becuase I had to, but because I
-                    <em>could</em>.
-                </p>
-                <p>You can find out how to say my name and more on my <a
-                        href="https://kolibriBlitz.github.io/about">about</a> page.
-                    If you're interested in seeing my analysis projects you can check out my <a
-                        href="https://kolibriBlitz.github.io/portfolio">portfolio</a> page.</p>
-                <p>Feel free to <a href="https://kolibriBlitz.github.io/contact">get in touch with me</a> if you want to
-                    know more about what makes me <b><em>me</em></b>.</p>
+            <!-- Introduction Section -->
+            <section class="intro-section">
+                <h2><span lang="de">Wilkommen</span>, <span lang="fr">Bienvenue</span>, Welcome!</h2>
+                <p>Happy to see you &mdash; I'm your host as complex data is transformed into accessible solutions.
+                    [lorem ipsum elevator pitch]</p>
             </section>
 
-            <section>
+            <!-- Project Teaser Section -->
+            <section class="project-teaser">
+                <h2>Got Problems?</h2>
+                <div class="project-grid">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-content">
+                            <p>I find trends and present <a href="portfolio.html#SQL">actionable solutions</a>.</p>
+                            <div class="project-graphic">
+                                <img src="https://placehold.co/200x133/2D90A6/FFFFFF?text=SQL+Projects"
+                                    alt="SQL Projects Preview" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-content">
+                            <p>I tame messy data into <a href="portfolio.html#Python">nuggets fit for human
+                                    consumption</a>.</p>
+                            <div class="project-graphic">
+                                <img src="https://placehold.co/200x133/6CA663/FFFFFF?text=Maven+Goodreads"
+                                    alt="Maven Goodreads Project Preview" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-content">
+                            <p>I manage projects with the latest tech to deliver <a href="project-management.html">ahead
+                                    of schedule and under budget</a>.</p>
+                            <div class="project-graphic">
+                                <img src="https://placehold.co/200x133/196283/FFFFFF?text=Jira+Projects"
+                                    alt="Jira Project Management Preview" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-content">
+                            <p>I dig for information and craft <a href="portfolio.html#business-analysis">clear reports
+                                    to support smart decisions</a>.</p>
+                            <div class="project-graphic">
+                                <img src="https://placehold.co/200x133/80C375/FFFFFF?text=Business+Case"
+                                    alt="Business Case Analysis Preview" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="project-content">
+                            <p>I build and tune models that <a href="portfolio.html#Python">predict outcomes and guide
+                                    better choices</a>.</p>
+                            <div class="project-graphic">
+                                <img src="https://placehold.co/200x133/92DF86/013440?text=Bank+Churn"
+                                    alt="Bank Churn Model Preview" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Human Element Section -->
+            <section class="human-element" data-aos="fade-up">
                 <h2>👷🏼‍♀️ Woman at Work</h2>
-                <p>Pardon the pixels during construction...<br>
-                    this site is hosted with GitHub Pages and I am building it myself. </p> <br>
-                <p>Stay tuned for a glow-up. ✨ I'm working with Data Sistah Tiffany Teasley to <a
-                        href="https://www.data-sistah.com/coaching" target="_blank">AmplifAI</a> my coding skills.</p>
+                <p>I built this site from scratch, not because I <i>had</i> to, but because I <em>wanted</em> to. I
+                    treat new tools like puzzles: learn them quickly, use them well, and make them work for me. This
+                    portfolio isn't just a showcase of projects &mdash; it's a testament to how I approach challenges:
+                    curiosity first, solutions second, and results ALWAYS!</p>
             </section>
 
-            <section class="quote center fit">
+            <!-- Call to Action Section -->
+            <section class="cta-section" data-aos="zoom-in">
+                <div class="cta-content">
+                    <h2>Ready to Solve Your Challenge?</h2>
+                    <p>Leave your troubles outside. I'm obviously not afraid of a challenge. Let me know how I can
+                        tackle yours!</p>
+                    <a class="cta-button" href="mailto:melisande.fritzsche@gmail.com">Send Email</a>
+                </div>
+            </section>
 
+            <!-- Quote Section -->
+            <section class="quote center fit" data-aos="fade-up">
                 <blockquote cite="brainyquote.com/quotes/gary_vaynerchuk_503132">
                     I influence anybody who is able to get through the chaos of my first impression.
                 </blockquote>
-
                 <p class="quote">- Gary&nbsp;Vaynerchuck,<cite>"Interview with Fast Company, July 6, 2010"</cite></p>
             </section>
 
