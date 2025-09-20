@@ -8,28 +8,65 @@ const quoteData = {
             author: "Gary Vaynerchuk",
             cite: '"Interview with Fast Company, July 6, 2010"',
             source: "brainyquote.com/quotes/gary_vaynerchuk_503132"
+        },
+        {text: "Curiosity is my default setting.",
+    author: "Mel"
+        },
+        {text:"See a need. Fill a need.",
+            author:"Big Weld",
+            cite:"Robots",
+            source:"https://www.imdb.com/title/tt0358082/quotes/?ref_=tt_dyk_qu"
         }
-        // Add more home quotes here when ready
     ],
 
     about: [
         {
-            text: "It's not that I'm so smart. It's that I stay with problems longer.",
-            author: "Albert Einstein",
-            cite: '"Bite-Size Einstein: Quotations on Just About Everything from the Greatest Mind of the Twentieth Century"',
-            source: "https://quoteinvestigator.com/2024/10/03/smart-stay/"
+            text: "Take chances, make mistakes, get messy!",
+            author: "Ms. Frizzle",
+            cite: '"The Magic School Bus"',
+            source: "https://bookriot.com/best-miss-frizzle-quotes/"
+        },
+        {
+            text: "It\’s not whether you get knocked down, it\’s whether you get up.",
+            author: "Vince Lombardi",
+            cite:"",  source:"https://www.brainyquote.com/quotes/vince_lombardi_121925"
+        },
+        {
+            text: "Challenge accepted.",
+            author: "Barney Stinson",
+            cite: "How I Met Your Mother",
+            source:"https://www.imdb.com/title/tt0460649/quotes/?ref_=tt_dyk_qu"
+        },
+        {
+            text: "Mel volunteers for everything!",
+            author: "Me",
+            cite: "",
+            source:""
         }
-        // Add more about quotes here when ready
     ],
 
     portfolio: [
         {
-            text: "It's not all about talent. It's about dependability, consistency, and being able to improve. If you work hard and you're coachable, and you understand what you need to do, you can improve.",
+            text: "If you work hard and you're coachable, and you understand what you need to do, you can improve.",
             author: "Bill Belichick",
             cite: '"Interview with CNBC, April 13, 2017"',
             source: "https://brainyquote.com/quotes/bill_belichick_975072"
-        }
-        // Add more portfolio quotes here when ready
+        },
+        {
+            text: "I don\’t just think outside the box — I question why the box exists. And why a box? Why not a sphere or a pyramid or...",
+    author: "Me",
+cite:"",
+source:""},
+{
+    text: "Chaos is just data waiting to be sorted or a mistake ready to be fixed.",
+    author: "Mel"
+        },
+        {
+            text: "What? Like it's hard?",
+            author: "Elle Woods",
+            cite: "Legally Blonde",
+            source:"https://www.imdb.com/title/tt0250494/quotes/?ref_=tt_dyk_qu"
+  }
     ],
 
     contact: [
