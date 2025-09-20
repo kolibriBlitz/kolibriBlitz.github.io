@@ -1676,7 +1676,8 @@ a:hover.download {
 .flip-card {
   background-color: transparent;
   width: 100%;
-  height: 500px; /* Increased from 400px */
+  height: 500px;
+  /* Increased from 400px */
   perspective: 1000px;
   cursor: pointer;
 }
@@ -1694,7 +1695,8 @@ a:hover.download {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1705,7 +1707,8 @@ a:hover.download {
   display: flex;
   flex-direction: column;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  overflow: hidden; /* Prevent overflow on front */
+  overflow: hidden;
+  /* Prevent overflow on front */
 }
 
 .flip-card-front {
@@ -1717,7 +1720,8 @@ a:hover.download {
   background: linear-gradient(135deg, var(--green-light) 0%, var(--green-lightest) 100%);
   color: var(--teal-dark);
   transform: rotateY(180deg);
-  overflow-y: auto; /* Allow scrolling on back cards */
+  overflow-y: auto;
+  /* Allow scrolling on back cards */
   overflow-x: hidden;
 }
 
@@ -1740,12 +1744,14 @@ a:hover.download {
   font-weight: 600;
 }
 
-.card-impact, .technical-details {
+.card-impact,
+.technical-details {
   flex-grow: 1;
   text-align: left;
 }
 
-.card-impact h4, .technical-details h4 {
+.card-impact h4,
+.technical-details h4 {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -1819,34 +1825,36 @@ a:hover.download {
   .portfolio-nav {
     padding: 2rem 1rem;
   }
-  
+
   .nav-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .filter-controls {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .filter-btn {
     width: 200px;
   }
-  
+
   .projects-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .flip-card {
-    height: 450px; /* Increased from 350px */
+    height: 450px;
+    /* Increased from 350px */
   }
-  
-  .flip-card-front, .flip-card-back {
+
+  .flip-card-front,
+  .flip-card-back {
     padding: 1.5rem;
   }
-  
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -1854,17 +1862,19 @@ a:hover.download {
 
 @media (max-width: 480px) {
   .flip-card {
-    height: 400px; /* Increased from 300px */
+    height: 400px;
+    /* Increased from 300px */
   }
-  
-  .flip-card-front, .flip-card-back {
+
+  .flip-card-front,
+  .flip-card-back {
     padding: 1rem;
   }
-  
+
   .card-header h3 {
     font-size: 1.2rem;
   }
-  
+
   .project-links {
     gap: 0.25rem;
   }
