@@ -20,6 +20,7 @@
     --contrast-teal-lightest: #DB7056;
     --contrast-blue-light: #D9B996;
     --contrast-teal-dark: #FFD4BC;
+    --contrast-green-light: #B85A78;
 
     /* Theme Colors */
     --light-sect-bg: var(--teal-darkest-semi);
@@ -41,6 +42,32 @@
     --nav-link: var(--teal-lightest);
     --nav-link-hover: var(--green-lightest);
     --nav-link-visited: var(--contrast-teal-dark);
+
+    /* Quote Section Colors - Default (Dark Theme) */
+    --quote-bg: var(--teal-darkest-semi);
+    --quote-border: var(--green-light);
+    --quote-accent: var(--green-light);
+    --quote-blockquote: var(--green-lightest);
+    --quote-text: var(--blue-light);
+    --quote-author: var(--contrast-teal-dark);
+    --quote-cite: var(--green-light);
+
+    /* Light Theme Quote Colors */
+    --light-quote-bg: var(--green-lightest);
+    --light-quote-border: var(--teal-mid);
+    --light-quote-accent: var(--teal-mid);
+    --light-quote-blockquote: var(--teal-dark);
+    --light-quote-text: var(--teal-dark);
+    --light-quote-author: var(--contrast-green-light);
+    --light-quote-cite: var(--teal-dark);
+
+    /* About Page Text Colors - Default (Dark Theme) */
+    --about-text: var(--blue-light);
+    --about-list: var(--blue-light);
+
+    /* Light Theme About Page Colors */
+    --light-about-text: var(--teal-lightest);
+    --light-about-list: var(--teal-lightest);
 
     /* Typography */
     --font-primary: Tahoma, Verdana, sans-serif;
@@ -73,6 +100,19 @@
 /* Theme Overrides */
 [data-theme="light"] {
     color-scheme: light;
+
+    /* Override quote colors for light theme */
+    --quote-bg: var(--light-quote-bg);
+    --quote-border: var(--light-quote-border);
+    --quote-accent: var(--light-quote-accent);
+    --quote-blockquote: var(--light-quote-blockquote);
+    --quote-text: var(--light-quote-text);
+    --quote-author: var(--light-quote-author);
+    --quote-cite: var(--light-quote-cite);
+
+    /* Override about page colors for light theme */
+    --about-text: var(--light-about-text);
+    --about-list: var(--light-about-list);
 }
 
 [data-theme="dark"] {

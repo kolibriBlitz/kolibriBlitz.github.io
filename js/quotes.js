@@ -29,7 +29,7 @@ const quoteData = {
         {
             text: "It\’s not whether you get knocked down, it\’s whether you get up.",
             author: "Vince Lombardi",
-            cite:"",  source:"https://www.brainyquote.com/quotes/vince_lombardi_121925"
+            cite:"Unknown",  source:"https://www.brainyquote.com/quotes/vince_lombardi_121925"
         },
         {
             text: "Challenge accepted.",
@@ -40,7 +40,7 @@ const quoteData = {
         {
             text: "Mel volunteers for everything!",
             author: "Me",
-            cite: "",
+            cite: "Team Meetings",
             source:""
         }
     ],
@@ -55,11 +55,11 @@ const quoteData = {
         {
             text: "I don\’t just think outside the box — I question why the box exists. And why a box? Why not a sphere or a pyramid or...",
     author: "Me",
-cite:"",
+cite:"all the dang time",
 source:""},
 {
     text: "Chaos is just data waiting to be sorted or a mistake ready to be fixed.",
-    author: "Mel"
+    author: "Me"
         },
         {
             text: "What? Like it's hard?",
@@ -75,8 +75,19 @@ source:""},
             author: "Hades",
             cite: 'Disney\'s "Hercules"',
             source: "https://title/tt0119282/quotes/?ref_#tt_dyk_qu"
+        },
+        {
+            text: "🎼Hands, Touchin' hands, Reachin' out, Touching me touchin' you 🎶",
+            author: "Neil Diamond",
+            cite: "Sweet Caroline",
+            source:"https://www.musixmatch.com/pro/"
+        },
+        {
+            text: "Have your people call my people. We'll do lunch.",
+            author: "Unknown",
+            cite: "",
+            source:""
         }
-        // Add more contact quotes here when ready
     ]
 };
 

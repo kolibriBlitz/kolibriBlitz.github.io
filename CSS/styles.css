@@ -358,7 +358,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  color: var(--blue-light);
+  color: var(--teal-lightest);
   text-decoration: none;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -402,7 +402,7 @@ footer {
 .footer-bottom p {
   margin: 0;
   font-size: 0.95rem;
-  color: var(--blue-light);
+  color: var(--teal-lightest);
 }
 
 /* Responsive design */
@@ -517,6 +517,46 @@ a {
   line-height: var(--line-height-body);
 }
 
+/* Text emphasis elements for better contrast */
+/* Default text emphasis styling */
+i,
+em {
+  color: var(--contrast-green-light);
+  font-style: italic;
+}
+
+b,
+strong {
+  color: var(--contrast-green-light);
+  font-weight: bold;
+}
+
+/* Specific styling for checklist section */
+.checklist i,
+.checklist em {
+  color: var(--contrast-teal-dark);
+  font-style: italic;
+}
+
+.checklist b,
+.checklist strong {
+  color: var(--contrast-teal-lightest);
+  font-weight: bold;
+}
+
+/* Specific styling for Woman at Work section */
+.human-element i,
+.human-element em {
+  color: var(--contrast-green-light);
+  font-style: italic;
+}
+
+.human-element b,
+.human-element strong {
+  color: var(--contrast-green-light);
+  font-weight: bold;
+}
+
 /*----COMPONENT UTILITIES----*/
 /* Download Button */
 .download {
@@ -586,13 +626,49 @@ a:hover.download {
 
 /* Page Quotation */
 .quote {
-  background: var(--green-mid-semi);
-  padding: 5px 12px;
-  border-radius: 40px;
-  color: #011C23;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
+  background: var(--quote-bg);
+  padding: 2.5rem;
+  border-radius: 20px;
+  margin: 3rem auto;
+  max-width: 800px;
+  position: relative;
+  border: 2px solid var(--quote-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.quote::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 6rem;
+  color: var(--quote-accent);
+  font-family: Georgia, serif;
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.quote::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--quote-accent) 0%, transparent 70%);
+  border-radius: 0 20px 0 100%;
+  opacity: 0.1;
+}
+
+.quote blockquote {
+  color: var(--quote-blockquote);
+  font-style: italic;
+  margin: 1rem 0 1.5rem 0;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  line-height: 1.6;
 }
 
 .quote p {
@@ -600,6 +676,40 @@ a:hover.download {
   font-size: clamp(1rem, 1.75vh, 1.6rem);
   line-height: 1.5;
   margin: 0;
+  text-align: center;
+  color: var(--quote-text);
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+
+.quote cite {
+  color: var(--quote-cite);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Quote author styling - for the author name part before the cite */
+.quote p.quote {
+  color: var(--quote-author);
+}
+
+.quote p.quote cite {
+  color: var(--quote-cite);
+}
+
+/* Responsive quote adjustments */
+@media (max-width: 768px) {
+  .quote {
+    padding: 2rem 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .quote::before {
+    font-size: 4rem;
+    top: -5px;
+    left: 15px;
+  }
 }
 
 /*----PAGE SPECIFIC STYLES----*/
@@ -864,11 +974,16 @@ a:hover.download {
   max-width: 900px;
 }
 
+.value-section p {
+  color: var(--about-text);
+}
+
 .checklist li {
   list-style-image: url(../Images/icon-check-circle.png);
   margin-bottom: 1rem;
   font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   line-height: 1.6;
+  color: var(--about-list);
 }
 
 /* Flip Cards */
@@ -1133,10 +1248,236 @@ a:hover.download {
 
 /* Styles to come */
 /* CONTACT PAGE */
-.contact li {
-  list-style: none;
-  line-height: 2.8rem;
-  gap: 24px;
+
+.contact-methods {
+  padding: 3rem 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.contact-methods h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 3rem;
+  color: var(--green-light);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  background: var(--teal-darkest-semi);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.contact-card:hover::before {
+  left: 100%;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--green-lightest);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.contact-icon {
+  background: linear-gradient(135deg, var(--green-light) 0%, var(--green-mid) 100%);
+  color: var(--teal-dark);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.contact-card h3 {
+  font-size: clamp(1.4rem, 2vh, 2rem);
+  margin-bottom: 1rem;
+  color: var(--green-lightest);
+  font-family: var(--font-decorative);
+}
+
+.contact-card p {
+  font-size: clamp(1.2rem, 1.5vh, 1.6rem);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--blue-light);
+}
+
+/* Unified Contact Card Button Styling */
+.contact-card .contact-btn,
+.contact-card .libutton,
+.contact-card .ghbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.8rem;
+  height: 32px;
+  border-radius: 25px;
+  /* Middle ground between 16px and 50px */
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  width: auto;
+  margin: 0;
+  min-width: 160px;
+  text-align: center;
+  font-family: var(--font-sans);
+  box-sizing: border-box;
+}
+
+/* Email button - primary style */
+.contact-card .contact-btn.primary {
+  background: var(--green-mid);
+  color: var(--teal-dark);
+  border-color: var(--green-mid);
+}
+
+.contact-card .contact-btn.primary:hover {
+  background: var(--green-light);
+  border-color: var(--green-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* LinkedIn button - branded style */
+.contact-card .libutton {
+  background: #0A66C2;
+  color: #ffffff !important;
+  border-color: #0A66C2;
+}
+
+.contact-card .libutton:hover {
+  background: #0952a3;
+  border-color: #0952a3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
+/* GitHub button - branded style */
+.contact-card .ghbutton {
+  background: #000000;
+  color: #ffffff !important;
+  border-color: #000000;
+}
+
+.contact-card .ghbutton:hover {
+  background: #333333;
+  border-color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-cta {
+  background: linear-gradient(135deg, var(--green-light) 0%, var(--green-mid) 100%);
+  color: var(--teal-dark);
+  padding: 3rem;
+  margin: 3rem auto;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.contact-cta h2 {
+  color: var(--teal-dark);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.contact-cta p {
+  color: var(--teal-dark);
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Fix contrast for secondary button in CTA section */
+.contact-cta .hero-button.secondary {
+  color: var(--teal-dark);
+  border-color: var(--teal-dark);
+}
+
+.contact-cta .hero-button.secondary:hover {
+  background: var(--teal-dark);
+  color: var(--green-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 968px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-intro,
+  .contact-cta {
+    margin: 2rem 1rem;
+    padding: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-methods {
+    padding: 2rem 1rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
 }
 
 
@@ -1176,6 +1517,357 @@ a:hover.download {
 
 .scroll-to-top .scroll-top-arrow {
   transition: stroke 0.3s;
+}
+
+/* ========================================
+   PORTFOLIO PAGE STYLES
+======================================== */
+
+/* Portfolio Navigation */
+.portfolio-nav {
+  background: var(--teal-darkest-semi);
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-nav .nav-container h2 {
+  text-align: center;
+  color: var(--green-light);
+  margin-bottom: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.nav-card {
+  background: var(--blue-light);
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--teal-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nav-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-color: var(--green-light);
+}
+
+.nav-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.nav-count {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Filter Controls */
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--green-light);
+  color: var(--teal-dark);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--green-lightest);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Overview Aside */
+.skills-overview {
+  background: var(--blue-dark-semi);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  border-left: 4px solid var(--green-light);
+}
+
+.skills-overview h2 {
+  color: var(--green-light);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category h3 {
+  color: var(--blue-light);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category li {
+  color: var(--teal-lightest);
+  padding: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.skill-category li::before {
+  content: "▸ ";
+  color: var(--green-light);
+  font-weight: bold;
+}
+
+/* Project Sections */
+.project-section {
+  margin: 4rem 0;
+}
+
+.project-section h2 {
+  color: var(--green-light);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Flip Cards */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 500px; /* Increased from 400px */
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Prevent overflow on front */
+}
+
+.flip-card-front {
+  background: linear-gradient(135deg, var(--blue-light) 0%, var(--teal-lightest) 100%);
+  color: var(--teal-dark);
+}
+
+.flip-card-back {
+  background: linear-gradient(135deg, var(--green-light) 0%, var(--green-lightest) 100%);
+  color: var(--teal-dark);
+  transform: rotateY(180deg);
+  overflow-y: auto; /* Allow scrolling on back cards */
+  overflow-x: hidden;
+}
+
+.card-header {
+  margin-bottom: 1.5rem;
+}
+
+.card-header h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-type {
+  background: var(--teal-dark);
+  color: var(--teal-lightest);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.card-impact, .technical-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.card-impact h4, .technical-details h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--teal-dark);
+}
+
+.impact-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.stat {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.skills-list li {
+  padding: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.skills-list li::before {
+  content: "⚡ ";
+  color: var(--contrast-teal-dark);
+  margin-right: 0.5rem;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-link {
+  background: var(--teal-dark);
+  color: var(--teal-lightest);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: var(--blue-mid);
+  transform: translateX(5px);
+}
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.flip-hint {
+  font-size: 0.8rem;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-nav {
+    padding: 2rem 1rem;
+  }
+  
+  .nav-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .filter-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-btn {
+    width: 200px;
+  }
+  
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .flip-card {
+    height: 450px; /* Increased from 350px */
+  }
+  
+  .flip-card-front, .flip-card-back {
+    padding: 1.5rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-card {
+    height: 400px; /* Increased from 300px */
+  }
+  
+  .flip-card-front, .flip-card-back {
+    padding: 1rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .project-links {
+    gap: 0.25rem;
+  }
 }
 
 .scroll-to-top:hover {
