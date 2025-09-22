@@ -4,134 +4,308 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L57RTFC3LQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L57RTFC3LQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-L57RTFC3LQ');
-</script>
+        gtag('config', 'G-L57RTFC3LQ');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Melisande Fritzsche's business analysis, data analysis and project management projects.">
+    <meta name="description"
+        content="Melisande Fritzsche's business analysis, data analysis and project management projects.">
     <title>About | Melisande Fritzsche | Business Analyst, Operations & Systems Analyst, Strategy Analyst</title>
     <link rel="icon" type="image/x-icon" href="Images/logo-kolibri-nobackground.png">
+    <link rel="stylesheet" href="CSS/tokens.css">
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="CSS/media-styles.css"> <!--styling for smaller screens-->
+    <link rel="stylesheet" href="CSS/nav-styles.css">
+    <link rel="stylesheet" href="CSS/media-styles.css"> <!--styles for smaller screens-->
+    <link rel="stylesheet" href="CSS/hero.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800,
+                once: false,
+                offset: 100
+            });
+        });
+    </script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/scrollToTop.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    <script src="js/quotes.js" defer></script>
+    <script src="js/flipCards.js" defer></script>
+    <script src="js/audioPlayer.js" defer></script>
 </head>
 
-
-
-    
 <body class="about">
-    
-    <!--Global Header-->
-    <header>
-        <!--Navigation Menu-->
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-        </nav>
-        <!--Logo and Header Content-->
-        <div class="header-wrapper">
-            <img src="Images/logo-kolibri-nobackground.png"
-                alt="My logo, a black origami hummingbird pierced by a rainbow lightning bolt">
+    <button class="theme-toggle" aria-label="Switch display mode">
+        <svg class="sun-and-moon" aria-hidden="true" viewBox="0 0 24 24">
+            <mask class="moon" id="moon-mask">
+                <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                <circle cx="7" cy="6" r="6" fill="black" />
+            </mask>
+            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+            <g class="sun-beams">
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </g>
+        </svg>
+    </button>
 
-            <hgroup>
-                <h1>Melisande&nbsp;Fritzsche</h1>
-                <p>I find solutions to business problems.</p>
-            </hgroup>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <!--Navigation Menu-->
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Toggle menu</span>
+    </button>
+    <div class="nav-overlay"></div>
+    <nav class="nav" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" aria-current="page">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>About Me</h1>
+            <p class="hero-tagline">But I go to 11.</p>
+            <p class="hero-description">
+                Professional self-starter with ADHD energy: I solve problems, deliver results, and make people laugh while I do.
+            </p>
+            <div class="hero-buttons">
+                <a href="Documents/BA-base-v4.6.pdf" class="hero-button primary"
+                    download="Melisande Fritzsche Resume">Download Resume</a>
+                <a href="portfolio.html" class="hero-button secondary">View My Projects</a>
+            </div>
         </div>
-        <a class="download" href="Documents/BA-base-v4.6.pdf" title="My Resume" download="Melisande Fritzsche Resume"><img
-                src="Images/icon-pdf.png" alt="" width="40px">My Resume</a>
     </header>
 
     <!---Main Content-->
     <div class="page-container">
         <main class="content-wrapper">
 
-            <!--Biography-->
-            <section>
+            <!-- Biography -->
+            <section class="bio-section" data-aos="fade-up">
                 <h2>Who I Am</h2>
-                <p>Business Analyst 🔮 Problem Solver 🕵🏼‍♀️ Why Girl 🤔</p>
-                <p>I am a detail-oriented professional who's driven by a desire to solve problems. I’ve built a strong
-                    foundation of adaptable skill sets learned through a broad range of experience&mdash;from kitchen
-                    operations to retail operations, inventory auditing to classroom teaching, and customer service to
-                    emerging tech. This diverse toolkit helps me approach problems with new perspectives, practical
-                    methods and analytical vigor.</p>
-                <!-- Name pronunciation with IPA characters and audio-->
-                <p>My name is pronounced: <b>'m&#603;l&#618;s&#601;nd 'fr&#618;tst&#643;i</b></p>
-                <p>It sounds like this:
-                    <audio controls src="Audio/my-name-pronunciation.mp3" preload="metadata"
-                        alt="Audio pronunciation of my name Melisande Fritzsche"
-                        title="Audio pronunciation of my name Melisande Fritzsche">
-                        <a href="my-name-pronunciation.mp3" download="Melisande Fritzsche Pronunciation.mp3">Browser not playing
-                            nice? Download the mp3 file.</a>
-                    </audio>
+                <div class="bio-highlight">
+                    <p>Business Analyst 🔮 Problem Solver 🕵🏼‍♀️ Why Girl 🤔</p>
+                </div>
+                <p>
+                    I've built a career on curiosity and adaptability. From kitchens to classrooms, customer service to
+                    emerging
+                    technology, I've learned to see problems from fresh angles and deliver solutions that stick. That
+                    mix of
+                    hands-on
+                    experience and analytical drive gives me a toolkit for tackling just about anything.
                 </p>
-                <p>If you want, you can just call me "Mel." It's been my nickname since the 2<sup>nd</sup> grade &mdash;
-                    short, sweet and easy to remember, just like me! 😉</p>
+                <div class="name-pronunciation" data-aos="fade-up" data-aos-delay="200">
+                    <p>My name is pronounced: <b>'m&#603;l&#618;s&#601;nd 'fr&#618;tst&#643;i</b></p>
+                    <p>It sounds like this:</p>
 
+                    <div class="custom-audio-player">
+                        <audio id="name-audio" preload="metadata">
+                            <source src="Audio/my-name-pronunciation.mp3" type="audio/mpeg">
+                            <a href="Audio/my-name-pronunciation.mp3" download="Melisande Fritzsche Pronunciation.mp3">
+                                Browser not playing nice? Download the mp3 file.
+                            </a>
+                        </audio>
+
+                        <div class="audio-controls">
+                            <button class="play-pause-btn" aria-label="Play pronunciation">
+                                <svg class="play-icon" viewBox="0 0 24 24" width="20" height="20">
+                                    <path fill="currentColor" d="M8 5v14l11-7z" />
+                                </svg>
+                                <svg class="pause-icon" viewBox="0 0 24 24" width="20" height="20"
+                                    style="display: none;">
+                                    <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                </svg>
+                            </button>
+
+                            <div class="audio-info">
+                                <div class="audio-title">Name Pronunciation</div>
+                                <div class="progress-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <div class="time-display">
+                                        <span class="current-time">0:00</span>
+                                        <span class="duration">0:00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="audio-options">
+                                <button class="speed-btn" aria-label="Playback speed">
+                                    <span class="speed-text">1x</span>
+                                </button>
+                                <a href="Audio/my-name-pronunciation.mp3"
+                                    download="Melisande Fritzsche Pronunciation.mp3" class="download-btn"
+                                    aria-label="Download pronunciation">
+                                    <svg viewBox="0 0 24 24" width="18" height="18">
+                                        <path fill="currentColor"
+                                            d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                                        <path fill="currentColor" d="M12,19L15,16H13V12H11V16H9L12,19Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        Or just call me "Mel." It's short, sweet, and easy to remember — just like me. 😉
+                    </p>
+                </div>
             </section>
-            <!--My Value to the Recruiter-->
-            <section>
+
+            <!-- Woman at Work -->
+            <section class="human-element" data-aos="fade-up">
+                <h2>👷🏼‍♀️ Woman at Work</h2>
+                <p>
+                    I built this site from scratch, not because I <i>had</i> to, but because I <b><em>wanted</em></b> to. New
+                    tools
+                    are like puzzles:
+                    I learn them fast, put them to work, and make them my own. This portfolio isn't just a showcase of
+                    projects —
+                    it's proof of how I approach challenges: curiosity first, solutions second, and results <strong>always</strong>.
+                </p>
+            </section>
+
+            <!-- My Value -->
+            <section class="value-section" data-aos="fade-up">
                 <h2>What I Do</h2>
                 <ul class="checklist">
-                    <li>I take on challenges others avoid.</li>
-                    <li>I ask questions (<em>a lot</em> of questions) to uncover root causes.</li>
-                    <li>I look for patterns others might miss.</li>
-                    <li>I discover meaning in data.</li>
-                    <li>I explain complex ideas in ways people actually understand.</li>
-                    <li>I volunteer for everything, seeing opportunity where others see nuisance.</li>
+                    <li data-aos="fade-up" data-aos-delay="100">I take on challenges others avoid.</li>
+                    <li data-aos="fade-up" data-aos-delay="200">I ask questions (<em>a lot</em> of questions) to uncover
+                        root causes.</li>
+                    <li data-aos="fade-up" data-aos-delay="300">I look for patterns others might miss.</li>
+                    <li data-aos="fade-up" data-aos-delay="400">I discover meaning in data.</li>
+                    <li data-aos="fade-up" data-aos-delay="500">I explain complex ideas in plain English.</li>
+                    <li data-aos="fade-up" data-aos-delay="600">I volunteer for the tasks no one else wants — and turn
+                        them into opportunities.</li>
                 </ul>
+
                 <h2>What I Bring to the Table</h2>
-                <ul class="checklist">
-                    <li>Ability to handle many activities and change gears fast and often.</li>
-                    <li>Challenge-oriented self-starter.</li>
-                    <li>Works with a sense of urgency and places high value on time.</li>
-                    <li>Challenges the status quo and thinks outside all the boxes.</li>
-                </ul>
-                <p>When these behaviors combine with my drive to learn, complete tasks, and explore new ideas, what you
-                    get is a powerhouse fueled by boundless energy, delivering creativity, real impact, and relentless
-                    focus. <small>Unfortunately, they cannot summon Captain Planet.🌐</small></p>
-                <p>You can learn more about <a href="Documents/TTI.pdf" title="My TTI Evaluation" target="_blank">my
-                        behaviors and drivers</a> to ensure I'm a good fit for your needs.</p>
-            </section>
-            <!--Resume-->
-            <section>
-                <h2>Before You Go</h2>
-                <p>You can
-                    <a href="Documents/BA-base-v4.6.pdf" title="My Resume" target="_blank">
-                        explore my resume in your browser</a> or
-                    <a href="Documents/BA-base-v4.6.pdf" title="My Resume" download="Melisande Fritzsche Resume">
-                        download a pdf copy it</a> for later.
+                <div class="flip-cards-container" data-aos="fade-up">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Adaptable</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>I can switch gears quickly without losing focus.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Challenge-Driven</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>I run toward problems, not away from them.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Action-Oriented</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>I work with urgency and value time highly.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Creative</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>I question the status quo and think beyond the obvious.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p data-aos="fade-up" data-aos-delay="300">
+                    When those powers combine you get a high-energy problem-solver who delivers impact, creativity, and
+                    clarity —
+                    minus the ability to summon Captain Planet. 🌐
                 </p>
             </section>
 
-            <section class="quote center fit">
-                <blockquote cite="https://quoteinvestigator.com/2024/10/03/smart-stay/">
-                    It's not that I'm so smart. It's that I stay with problems longer.
+            <!-- Optional Quote -->
+            <section class="quote center fit" data-aos="zoom-in">
+                <blockquote cite="https://bookriot.com/best-miss-frizzle-quotes/">"Take chances, make mistakes, get
+                    messy!"
                 </blockquote>
-                <p class="quote">- Attributed to Albert&nbsp;Einstein,<cite>"Bite-Size Einstein: Quotations on Just
-                        About Everything from the Greatest Mind of the Twentieth Century"</cite></p>
+                <p class="quote">- Ms.Frizzle, <cite>The Magic School Bus</cite></p>
             </section>
+
         </main>
 
         <!--Global Footer-->
-        <footer>
-            <p class="socials"> <a href="mailto:melisande.fritzsche@gmail.com"><img src="Images/icon-email.png"
-                        alt="Email Melisande Fritzsche"></a> <a href="www.linkedin.com/in/melisandefritzsche"
-                    target="_blank"><img src="Images/icon-logo-linkedin.png"
-                        alt="Visit Melisande Fritzsche's LinkedIn page"></a></p>
+        <footer role="contentinfo" aria-label="Site footer">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <h3>Melisande Fritzsche</h3>
+                    <p class="footer-tagline">In the business of better</p>
+                    <p class="footer-description">Business Analyst • Operations & Systems Analyst • Strategy Analyst</p>
+                </div>
 
-            <div class="copy">
-                <p>&copy; 2025 Melisande Fritzsche</p>
-                <p>Last updated: <time datetime="2025-09-02"></time>September 2, 2025</p>
+                <div class="footer-section footer-nav">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="portfolio.html#SQL">SQL Projects</a></li>
+                            <li><a href="portfolio.html#Python">Python Projects</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-section footer-connect">
+                    <h4>Let's Connect</h4>
+                    <div class="footer-socials">
+                        <a href="mailto:melisande.fritzsche@gmail.com" aria-label="Email Melisande Fritzsche">
+                            <img src="Images/icon-email.png" alt="" width="32" height="32">
+                            <span>Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/melisandefritzsche" target="_blank" rel="noopener"
+                            aria-label="Visit Melisande Fritzsche's LinkedIn profile">
+                            <img src="Images/icon-logo-linkedin.png" alt="" width="32" height="32">
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Melisande Fritzsche. All rights reserved.</p>
+                <p>Last updated: <time id="last-updated" datetime="">Loading...</time></p>
             </div>
         </footer>
     </div>

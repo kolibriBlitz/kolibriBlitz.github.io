@@ -1,0 +1,258 @@
+/* Design Tokens - Colors, Typography, and other foundational styles */
+
+:root {
+    /* Color Palette */
+    --blue-mid: #196283;
+    --blue-light: #96C6D9;
+    --teal-dark: #013440;
+    --teal-mid: #2D90A6;
+    --teal-lightest: #C4F4FF;
+    --green-mid: #6CA663;
+    --green-light: #80C375;
+    --green-lightest: #92DF86;
+
+    /* Semi-transparent Colors */
+    --teal-darkest-semi: #011C2390;
+    --blue-dark-semi: #19628380;
+    --green-mid-semi: #6CA66380;
+
+    /* Contrast Colors */
+    --contrast-teal-lightest: #DB7056;
+    --contrast-blue-light: #D9B996;
+    --contrast-teal-dark: #FFD4BC;
+    --contrast-green-light: #B85A78;
+
+    /* Theme Colors */
+    --light-sect-bg: var(--teal-darkest-semi);
+    --light-color: var(--blue-light);
+    --light-h2: var(--green-light);
+    --light-link: var(--teal-mid);
+    --light-link-hover: var(--green-light);
+    --light-link-visited: var(--contrast-teal-lightest);
+    --light-main-bg: var(--blue-light);
+    --dark-sect-bg: var(--green-lightest);
+    --dark-color: var(--blue-mid);
+    --dark-h2: var(--green-mid);
+    --dark-link: var(--blue-light);
+    --dark-link-hover: var(--green-mid);
+    --dark-link-visited: var(--contrast-blue-light);
+    --dark-main-bg: var(--teal-dark);
+
+    /* Navigation Theme Colors */
+    --nav-link: var(--teal-lightest);
+    --nav-link-hover: var(--green-lightest);
+    --nav-link-visited: var(--contrast-teal-dark);
+
+    /* Quote Section Colors - Default (Dark Theme) */
+    --quote-bg: var(--teal-darkest-semi);
+    --quote-border: var(--green-light);
+    --quote-accent: var(--green-light);
+    --quote-blockquote: var(--green-lightest);
+    --quote-text: var(--blue-light);
+    --quote-author: var(--contrast-teal-dark);
+    --quote-cite: var(--green-light);
+
+    /* Light Theme Quote Colors */
+    --light-quote-bg: var(--green-lightest);
+    --light-quote-border: var(--teal-mid);
+    --light-quote-accent: var(--teal-mid);
+    --light-quote-blockquote: var(--teal-dark);
+    --light-quote-text: var(--teal-dark);
+    --light-quote-author: var(--contrast-green-light);
+    --light-quote-cite: var(--teal-dark);
+
+    /* About Page Text Colors - Default (Dark Theme) */
+    --about-text: var(--blue-light);
+    --about-list: var(--blue-light);
+
+    /* Light Theme About Page Colors */
+    --light-about-text: var(--teal-lightest);
+    --light-about-list: var(--teal-lightest);
+
+    /* Portfolio Colors - Default (Dark Theme) */
+    --portfolio-card-desc: var(--blue-mid);
+    --portfolio-card-text: var(--blue-light);
+    --portfolio-card-heading: var(--teal-dark);
+    --portfolio-nav-text: var(--blue-light);
+    --portfolio-filter-text: var(--teal-dark);
+
+    /* Light Theme Portfolio Colors */
+    --portfolio-card-desc: var(--teal-mid);
+    --light-portfolio-card-text: var(--blue-mid);
+    --light-portfolio-card-heading: var(--blue-mid);
+    --light-portfolio-nav-text: var(--teal-dark);
+    --light-portfolio-filter-text: var(--blue-mid);
+
+    /* Typography */
+    --font-primary: Tahoma, Verdana, sans-serif;
+    --font-decorative: "Ink Free", "Papyrus", fantasy;
+    --font-linkedin: "SF Pro Text", Helvetica, sans-serif;
+    --font-github: "Mona Sans", "Helvetica Neue", sans-serif;
+
+    /* Font Sizes - Using clamp values */
+    --font-size-h1: clamp(1.2rem, 7.5vw, 7.2rem);
+    --font-size-h2: clamp(1.4rem, 3vh, 2.4rem);
+    --font-size-h3: clamp(1.4rem, 3vh, 2.4rem);
+    --font-size-header-p: clamp(1rem, 4.5vw, 3.6rem);
+    --font-size-body: clamp(1.2rem, 2.5vh, 1.8rem);
+    --font-size-nav: clamp(1.2rem, 2vw, 1.8rem);
+    --font-size-quote: clamp(1rem, 1.75vh, 1.6rem);
+
+    /* Line Heights */
+    --line-height-h1: clamp(2rem, 3vh, 3rem);
+    --line-height-body: clamp(2rem, 3vh, 3rem);
+    --line-height-quote: clamp(2rem, 3vh, 3rem);
+
+    /* Color Scheme */
+    color-scheme: light dark;
+
+    /* Theme Toggle Colors */
+    --theme-toggle-bg: var(--teal-dark);
+    --theme-toggle-color: var(--teal-lightest);
+}
+
+/* Theme Overrides */
+[data-theme="light"] {
+    color-scheme: light;
+
+    /* Override quote colors for light theme */
+    --quote-bg: var(--light-quote-bg);
+    --quote-border: var(--light-quote-border);
+    --quote-accent: var(--light-quote-accent);
+    --quote-blockquote: var(--light-quote-blockquote);
+    --quote-text: var(--light-quote-text);
+    --quote-author: var(--light-quote-author);
+    --quote-cite: var(--light-quote-cite);
+
+    /* Override about page colors for light theme */
+    --about-text: var(--light-about-text);
+    --about-list: var(--light-about-list);
+
+    /* Override portfolio colors for light theme */
+    --portfolio-card-text: var(--light-portfolio-card-text);
+    --portfolio-card-heading: var(--light-portfolio-card-heading);
+    --portfolio-nav-text: var(--light-portfolio-nav-text);
+    --portfolio-filter-text: var(--light-portfolio-filter-text);
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    padding: 0.5rem;
+    background: var(--theme-toggle-bg);
+    border: 2px solid var(--theme-toggle-color);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--theme-toggle-color);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    color: var(--theme-toggle-color);
+}
+
+.sun-and-moon>.sun {
+    transition: transform 0.5s cubic-bezier(0.5, 1.25, 0.75, 1.25);
+}
+
+.sun-and-moon>.sun-beams {
+    stroke: var(--theme-toggle-color);
+    stroke-width: 2px;
+    transition: transform 0.5s cubic-bezier(0.5, 1.5, 0.75, 1.25),
+        opacity 0.5s cubic-bezier(0.25, 0, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    [data-theme="dark"] .sun-and-moon>.sun {
+        transform: scale(1.75);
+    }
+
+    [data-theme="dark"] .sun-and-moon>.sun-beams {
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* Monochromatic Color Reference Classes */
+.Blue-Shades-1-hex {
+    color: #1D3742;
+}
+
+/* darkest */
+.Blue-Shades-2-hex {
+    color: #196283;
+}
+
+.Blue-Shades-3-hex {
+    color: #B0E6FF;
+}
+
+.Blue-Shades-4-hex {
+    color: #DBF4FF;
+}
+
+/* lightest */
+
+.Teal-Shades-1-hex {
+    color: #011C23;
+}
+
+/* darkest */
+.Teal-Shades-2-hex {
+    color: #1B5562;
+}
+
+.Teal-Shades-3-hex {
+    color: #63AEBF;
+}
+
+.Teal-Shades-4-hex {
+    color: #C4F4FF;
+}
+
+/* Original Color Theme Reference Classes */
+.colortheme_analysiswoman_colorful-1-hex {
+    color: #196283;
+}
+
+/* dark blue */
+.colortheme_analysiswoman_colorful-2-hex {
+    color: #96C6D9;
+}
+
+/* light blue */
+.colortheme_analysiswoman_colorful-3-hex {
+    color: #013440;
+}
+
+/* dark teal */
+.colortheme_analysiswoman_colorful-4-hex {
+    color: #2D90A6;
+}
+
+/* teal */
+.colortheme_analysiswoman_colorful-5-hex {
+    color: #6CA663;
+}
+
+/* mid green */

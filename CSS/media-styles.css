@@ -1,20 +1,70 @@
 /*********MEDIA Responsive Styles*********/
+
+/* Mobile-specific bird animations */
+@keyframes floatMobileLeft {
+    0% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translateX(-30px) translateY(40px);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px);
+        opacity: 0.8;
+    }
+}
+
+@keyframes floatMobileRight {
+    0% {
+        transform: translateX(0px) translateY(0px) scaleX(-1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translateX(30px) translateY(40px) scaleX(-1);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px) scaleX(-1);
+        opacity: 0.8;
+    }
+}
+
 @media screen and (max-width: 710px) {
 
     .header-wrapper {
         padding: 8px;
         text-align: center;
         justify-content: space-evenly;
-        gap:0;
+        gap: 0;
     }
 
-    header h1 {
-        /*font-size: 4.6rem;*/
-        /* 46px */
+    /* Hero bird animations for mobile */
+    .hero::before,
+    .hero::after {
+        width: 80px;
+        height: 80px;
+        top: 15%;
+        opacity: 0.7;
+    }
+
+    .hero::before {
+        left: 5%;
+        animation: floatMobileLeft 6s ease-in-out infinite;
+    }
+
+    .hero::after {
+        right: 5%;
+        animation: floatMobileRight 6s ease-in-out infinite;
     }
 
     header p {
-       /* font-size: 2.4rem;*/
+        /* font-size: 2.4rem;*/
         /* 24px */
         font-weight: 600;
     }
@@ -79,22 +129,24 @@
         text-align: center;
         max-width: 100%;
     }
+
     .content-wrapper {
         display: block;
         background-position: top center;
     }
-/*
+
+    /*
     header h1 {
         /*font-size: 3rem;*/
-        
+
 
     header p {
         /*font-size: 1.5rem;*/
-        
-        font-weight: 400;
-    }*/
 
-    header img {
+        font-weight: 400;
+    }
+
+    */ header img {
         max-width: 16vw;
     }
 
@@ -126,12 +178,12 @@
     }
 
     .quote p {
-        
+
         margin: 0;
     }
 
     blockquote {
-        
+
         margin: 0;
     }
 

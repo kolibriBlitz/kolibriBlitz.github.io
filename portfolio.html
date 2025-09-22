@@ -3,192 +3,533 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L57RTFC3LQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L57RTFC3LQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-L57RTFC3LQ');
-</script>
-    
+        gtag('config', 'G-L57RTFC3LQ');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="description" content="Melisande Fritzsche's analyst portfolio with SQL and Python projects">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Melisande Fritzsche | Business Analyst, Operations & Systems Analyst, Strategy Analyst</title>
     <link rel="icon" type="image/x-icon" href="Images/logo-kolibri-nobackground.png">
+    <link rel="stylesheet" href="CSS/tokens.css">
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="CSS/media-styles.css"> <!--styling for smaller screens-->
+    <link rel="stylesheet" href="CSS/nav-styles.css">
+    <link rel="stylesheet" href="CSS/media-styles.css"> <!--styles for smaller screens-->
+    <link rel="stylesheet" href="CSS/hero.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="js/nav.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/scrollToTop.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    <script src="js/quotes.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
-    
 <body class="portfolio">
-    
-    <!--Global Header-->
-    <header>
-        <!--Navigation Menu-->
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-        </nav>
-        <!--Logo and Header Content-->
-        <div class="header-wrapper">
-            <img src="Images/logo-kolibri-nobackground.png"
-                alt="My logo, a black origami hummingbird pierced by a rainbow lightning bolt">
+    <button class="theme-toggle" aria-label="Switch display mode">
+        <svg class="sun-and-moon" aria-hidden="true" viewBox="0 0 24 24">
+            <mask class="moon" id="moon-mask">
+                <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                <circle cx="7" cy="6" r="6" fill="black" />
+            </mask>
+            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+            <g class="sun-beams">
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </g>
+        </svg>
+    </button>
 
-            <hgroup>
-                <h1>Melisande&nbsp;Fritzsche</h1>
-                <p>I find solutions to business problems.</p>
-            </hgroup>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <!--Navigation Menu-->
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="hamburger-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Toggle menu</span>
+    </button>
+    <div class="nav-overlay"></div>
+    <nav class="nav" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>My Portfolio</h1>
+            <p class="hero-tagline">I solve business problems with data, research and chutzpah.</p>
+            <p class="hero-description">
+                Smart, teachable, high-energy problem solver with a track record of getting stuff done.
+            </p>
+            <div class="hero-buttons">
+                <a href="Documents/BA-base-v4.6.pdf" download="Melisande Fritzsche Analyst Resume"
+                    class="hero-button primary">Download Resume</a>
+                <a href="#portfolio-nav" class="hero-button secondary">View Projects</a>
+            </div>
         </div>
-        <a class="download" href="Documents/ba-base-v4.6.pdf" title="My Resume"
-            download="Melisande Fritzsche Resume"><img src="Images/icon-pdf.png" alt="" width="40px">My Resume</a>
     </header>
     <!--End Global Header-->
 
     <!--Page Container-->
     <div class="page-container">
         <main class="content-wrapper">
-            <section>
+            <!-- Portfolio Navigation -->
+            <nav id="portfolio-nav" class="portfolio-nav" aria-label="Portfolio sections" data-aos="fade-up">
+                <div class="nav-container">
+                    <h2>Jump to Section</h2>
+                    <div class="nav-grid">
+                        <a href="#business-analysis" class="nav-card" data-filter="business">
+                            <span class="nav-icon">📊</span>
+                            <span class="nav-title">Business Analysis</span>
+                            <span class="nav-count">1 project</span>
+                        </a>
+                        <a href="#data-analysis" class="nav-card" data-filter="data">
+                            <span class="nav-icon">📈</span>
+                            <span class="nav-title">Data Analysis</span>
+                            <span class="nav-count">2 projects</span>
+                        </a>
+                        <a href="#project-management" class="nav-card" data-filter="pm">
+                            <span class="nav-icon">⚡</span>
+                            <span class="nav-title">Project Management</span>
+                            <span class="nav-count">1 project</span>
+                        </a>
+                        <a href="#skills-overview" class="nav-card" data-filter="all">
+                            <span class="nav-icon">🎯</span>
+                            <span class="nav-title">Skills Overview</span>
+                            <span class="nav-count">All skills</span>
+                        </a>
+                    </div>
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-filter="all">Show All</button>
+                        <button class="filter-btn" data-filter="business">Business Analysis</button>
+                        <button class="filter-btn" data-filter="data">Data Analysis</button>
+                        <button class="filter-btn" data-filter="pm">Project Management</button>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Skills Overview Aside -->
+            <aside id="skills-overview" class="skills-overview" data-aos="fade-left">
+                <h2>Skills at a Glance</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Business Analysis</h3>
+                        <ul>
+                            <li>Market Research</li>
+                            <li>Competitor Analysis</li>
+                            <li>Risk Assessment</li>
+                            <li>SWOT Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data Analysis</h3>
+                        <ul>
+                            <li>SQL (Advanced)</li>
+                            <li>Python</li>
+                            <li>Data Visualization</li>
+                            <li>Statistical Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Project Management</h3>
+                        <ul>
+                            <li>Scrum/Agile</li>
+                            <li>Jira/Confluence</li>
+                            <li>Sprint Planning</li>
+                            <li>Stakeholder Communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Business Analysis Projects -->
+            <section id="business-analysis" class="project-section" data-filter="business" data-aos="fade-up">
                 <h2>Business Analysis Projects</h2>
-                <h3>Market Expansion</h3>
-                <p>This project was born from my wish to see Aldi in Ogden and uses business analysis and market
-                    research to explore where the grocer could thrive next. I found <a href="AP-Aldi-Utah-Expansion-Property-Database.html" target="_blank">potential sites</a> that meet Aldi's requirements and sent them with my documentation to the Aldi real estate representative for the Western US. Despite my and others' requests, Utah remains outside of Aldi's current expansion scope. 😭</p>
-                <p>Skills Demonstrated</p>
-                <ul>
-                    <li>Business case development</li>
-                    <li>Market research</li>
-                    <li>Location analysis</li>
-                    <li>Competitor analysis</li>
-                    <li>SWOT analysis</li>
-                    <li>Risk impact assessment</li>
-                    <li><a href="https://chatgpt.com/share/6887cac7-045c-8000-a8cc-ff60139c7c6a" target="_blank">AI prompt engineering and collaboration</a></li>
-                </ul>
-                <p>You can follow these public links to my <a href="https://melisandefritzsche.atlassian.net/wiki/external/YTZkMjhmZDg2NDQzNDFlN2JhMDQxMmRmM2NkYmJkMzI" target="_blank">competitor analysis</a>, <a href="https://melisandefritzsche.atlassian.net/wiki/external/Y2FlYWY5ZWFkZmU0NDQ1MmFmMDhmYTIzMTZhNWIxMTQ" target="_blank">SWOT analysis</a>, <a href="https://melisandefritzsche.atlassian.net/wiki/external/ODQxMTkxZGQ5YjZkNGJlYzk0ZDc2NTFhYzI4YWNkNTI" target="_blank">risk analysis</a> and <a href="https://melisandefritzsche.atlassian.net/wiki/external/ZGU3NDk2NDEyNDM4NGY2MWE3MjUzOGJiYzEwNzIyOWI">business proposal</a>.<small> ⚠ Links may not work because a paid subscription to Confluence is out of my budget right now. ⚠</small></p>
-                <p>If the links are broken or inaccessible, you can download pdf copies.
-                    <ul>
-                        <li><a href="Documents/AP-Aldi-Utah-Expansion-Competitor-Analysis.pdf" download="Competitor Analysis by Melisande Fritzsche">Competitor Analysis</a></li>
-                        <li><a href="Documents/AP-Aldi-Utah-Expansion-SWOT-Analysis.pdf" download="SWOT Analysis by Melisande Fritzsche">SWOT Analysis</a></li>
-                        <li><a href="Documents/AP-Aldi-Utah-Expansion-Risk-Analysis.pdf" download="Risk Analysis by Melisande Fritzsche">Risk Analysis</a></li>
-                        <li><a href="Documents/AP-Aldi-Utah-Expansion-Business-Proposal.pdf" download="Business Proposal by Melisande Fritzsche">Business Proposal</a></li>
-                    </ul>
-                </p>
-                
+                <div class="projects-container">
+                    <div class="project-card flip-card" data-aos="flip-left" data-aos-delay="100">
+                        <div class="flip-card-inner">
+                            <!-- Front of card -->
+                            <div class="flip-card-front">
+                                <div class="card-header">
+                                    <h3>Aldi Market Expansion</h3>
+                                    <span class="project-type">Business Analysis</span>
+                                </div>
+                                <div class="card-impact">
+                                    <h4>💪 The Impact</h4>
+                                    <p class="project-desc">I wanted Aldi in Utah, so I built a complete business case
+                                        proving why they
+                                        should expand here. Because when I want something, I make it happen with data.
+                                    </p>
+                                    <div class="impact-stats">
+                                        <span class="stat">📍 Identified 12+ viable locations</span>
+                                        <span class="stat">📊 Full market analysis delivered</span>
+                                        <span class="stat">🎯 Sent to Aldi's Western US team</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="flip-hint">Click to see the Business brilliance ✨</span>
+                                </div>
+                            </div>
+                            <!-- Back of card -->
+                            <div class="flip-card-back">
+                                <div class="card-header">
+                                    <h3>How I Made It Happen</h3>
+                                    <span class="project-type">Technical Skills</span>
+                                </div>
+                                <div class="technical-details">
+                                    <h4>🔧 Skills I Flexed</h4>
+                                    <ul class="skills-list">
+                                        <li>Business case development</li>
+                                        <li>Market research & location analysis</li>
+                                        <li>Competitor analysis</li>
+                                        <li>SWOT analysis</li>
+                                        <li>Risk impact assessment</li>
+                                        <li>AI prompt engineering</li>
+                                    </ul>
+                                    <h4>📁 The Goods</h4>
+                                    <div class="project-links">
+                                        <a href="AP-Aldi-Utah-Expansion-Property-Database.html" target="_blank"
+                                            class="project-link">📍 Property Database</a>
+                                        <a href="Documents/AP-Aldi-Utah-Expansion-Business-Proposal.pdf" download
+                                            class="project-link">📋 Business Proposal</a>
+                                        <a href="Documents/AP-Aldi-Utah-Expansion-SWOT-Analysis.pdf" download
+                                            class="project-link">⚖️ SWOT Analysis</a>
+                                        <a href="Documents/AP-Aldi-Utah-Expansion-Risk-Analysis.pdf" download
+                                            class="project-link">⚠️ Risk Analysis</a>
+                                        <a href="https://chatgpt.com/share/6887cac7-045c-8000-a8cc-ff60139c7c6a"
+                                            target="_blank" class="project-link">🤖 ChatGPT Collaboration</a>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="flip-hint">Click to flip back 🔄</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section>
-                <h2>Data Analysis Projects </h2>
-                <h3>Restaurant Orders - SQL</h3>
-                <p>A fictitious restaurant retained my services to analyze their menu and order data for the first
-                    quarter. They want to increase revenue and improve profits. <small>Data sourced from <a
-                            href="https://www.mavenanalytics.io" target="_blank" rel="noopener noreferrer"><small>Maven
-                                Analytics</small></a>.</small></p>
-                <p>Skills Demonstrated</p>
-                <ul>
-                    <li>Cleaned data and handled anomalies to prepare datasets for analysis.</li>
-                    <li>Queried across relational tables using joins, aggregation, and grouping.</li>
-                    <li>Used common table expressions (CTEs) and functions to simplify complex logic.</li>
-                    <li>Performed time-based analysis with date formatting and calculations.</li>
-                    <li>Communicated insights through strategic thinking and data storytelling.</li>
-                    <li>Visualized findings to support data-driven decision-making.</li>
-                </ul>
+            <!-- Data Analysis Projects -->
+            <section id="data-analysis" class="project-section" data-filter="data" data-aos="fade-up">
+                <h2>Data Analysis Projects</h2>
+                <div class="projects-container">
+                    <!-- SQL Project -->
+                    <div class="project-card flip-card" data-aos="flip-left" data-aos-delay="200">
+                        <div class="flip-card-inner">
+                            <!-- Front of card -->
+                            <div class="flip-card-front">
+                                <div class="card-header">
+                                    <h3>Restaurant Revenue Optimization</h3>
+                                    <span class="project-type">SQL Analysis</span>
+                                </div>
+                                <div class="card-impact">
+                                    <h4>💰 The Impact</h4>
+                                    <p class="project-desc">A restaurant needed to boost profits. I dove into their Q1
+                                        data and emerged with
+                                        actionable insights that could actually move the needle on revenue.</p>
+                                    <div class="impact-stats">
+                                        <span class="stat">📊 Analyzed 3 months of orders</span>
+                                        <span class="stat">💡 Identified profit optimization opportunities</span>
+                                        <span class="stat">📈 Created interactive dashboards</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="flip-hint">Click to see the SQL sorcery ✨</span>
+                                </div>
+                            </div>
+                            <!-- Back of card -->
+                            <div class="flip-card-back">
+                                <div class="card-header">
+                                    <h3>SQL Skills in Action</h3>
+                                    <span class="project-type">Technical Deep Dive</span>
+                                </div>
+                                <div class="technical-details">
+                                    <h4>🔧 How I Dominated This Data</h4>
+                                    <ul class="skills-list">
+                                        <li>Complex SQL joins across relational tables</li>
+                                        <li>CTEs and advanced functions</li>
+                                        <li>Time-based analysis with date calculations</li>
+                                        <li>Data cleaning and anomaly handling</li>
+                                        <li>Power BI and Tableau visualizations</li>
+                                        <li>Strategic storytelling with data</li>
+                                    </ul>
+                                    <h4>📁 Check Out My Work</h4>
+                                    <div class="project-links">
+                                        <a href="https://github.com/kolibriBlitz/SQL_Projects" target="_blank"
+                                            class="project-link">💻 GitHub Repo</a>
+                                        <a href="https://public.tableau.com/app/profile/melisande.fritzsche/viz/OrderInsights/Pricing?publish=yes"
+                                            target="_blank" class="project-link">📊 Live Dashboard</a>
+                                        <a href="https://github.com/kolibriBlitz/SQL_Projects/deliverables/Restaurant_Orders.pdf"
+                                            target="_blank" class="project-link">📋 Visualizations</a>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="flip-hint">Click to flip back 🔄</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <p><a href="https://github.com/kolibriBlitz/SQL_Projects" target="_blank">GitHub Repository</a>: Root
-                    folder for the project. The README.md is your friend.<br>
-                    <a href="https://github.com/kolibriBlitz/SQL_Projects/deliverables/Restaurant_Orders.pdf"
-                        target="_blank">Visualizations</a>: Exported PDF file of the Power BI presentation.<br>
-                    <a href="https://public.tableau.com/app/profile/melisande.fritzsche/viz/OrderInsights/Pricing?publish=yes" target="_blank">Dashboard</a>: Dashboard created using Tableau and hosted on Tableau Public.
-                    <a href="https://github.com/kolibriBlitz/SQL_Projects/blob/main/deliverables/memo.txt"
-                        target="_blank">Documents</a>: Writing samples.
-                </p>
-
-                <h3>Goodreads Book Recommendations - Python</h3>
-                <p>Maven Bookshelf Challenge: Design a tool using Goodreads data to build a summer reading list tailored
-                    to anyone's unique tastes. <small>Data sourced from <a href="https://www.mavenanalytics.io"
-                            target="_blank" rel="noopener noreferrer"><small>Maven Analytics</small></a>.</small></p>
-                <p>Skills Demonstrated</p>
-                <ul>
-                    <li>Imported and read data sets into variables.</li>
-                    <li>Cleaned data and handled anomalies to prepare datasets for analysis.</li>
-
-                    <li>Used Markdown to explain analytical approach and reasoning behind key decisions to others.</li>
-                    <li>Normalized, standardized, and reshaped data using string methods, table joins, and structural
-                        transformations to prepare
-                        for analysis.</li>
-                    <li>Visualized data insights using pyplot.</li>
-                    <li>Leveraged Streamlit to create an app for users to create their personalized reading list.</li>
-                </ul>
-                <p>This is <a href="https://www.kaggle.com/code/melisandefritzsche/bookshelf-challenge" target="_blank">my Kaggle notebook</a>. I have an testing Kaggle notebook if you want to get a glimpse into <a href="https://www.kaggle.com/code/melisandefritzsche/testing" target="_blank">my thought and discovery processes.</a></p>
-                
-                <p><a href="https://maven-goodreads-july2025.streamlit.app/" target="_blank">Streamlit app</a>! I am still working out the kinks, but it meets the basic requirements. <b>MVP FTW</b></p>
+                    <!-- Python Project -->
+                    <div class="project-card flip-card" data-aos="flip-left" data-aos-delay="300">
+                        <div class="flip-card-inner">
+                            <!-- Front of card -->
+                            <div class="flip-card-front">
+                                <div class="card-header">
+                                    <h3>Personalized Book Recommendations</h3>
+                                    <span class="project-type">Python Analysis</span>
+                                </div>
+                                <div class="card-impact">
+                                    <h4>📚 The Impact</h4>
+                                    <p class="project-desc">Maven challenged me to build a book recommendation tool. I
+                                        delivered a full
+                                        Streamlit app that creates personalized reading lists <em>and</em> customizable
+                                        charts. Because data is fun!</p>
+                                    <div class="impact-stats">
+                                        <span class="stat">🤖 Built interactive app</span>
+                                        <span class="stat">📊 Processed Goodreads data</span>
+                                        <span class="stat">🎯 Personalized recommendations</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="flip-hint">Click to see the Python power ✨</span>
+                                </div>
+                            </div>
+                            <!-- Back of card -->
+                            <div class="flip-card-back">
+                                <div class="card-header">
+                                    <h3>Python Mastery Unleashed</h3>
+                                    <span class="project-type">Technical Deep Dive</span>
+                                </div>
+                                <div class="technical-details">
+                                    <h4>🐍 Python Skills That Impressed</h4>
+                                    <ul class="skills-list">
+                                        <li>Data import and preprocessing</li>
+                                        <li>Data cleaning and anomaly handling</li>
+                                        <li>String methods and table joins</li>
+                                        <li>Data visualization with pyplot</li>
+                                        <li>Streamlit app development</li>
+                                        <li>Markdown documentation</li>
+                                    </ul>
+                                    <h4>📁 See It in Action</h4>
+                                    <div class="project-links">
+                                        <a href="https://maven-goodreads-july2025.streamlit.app/" target="_blank"
+                                            class="project-link">🚀 Live App</a>
+                                        <a href="https://www.kaggle.com/code/melisandefritzsche/bookshelf-challenge"
+                                            target="_blank" class="project-link">📓 Kaggle Notebook</a>
+                                        <a href="https://www.kaggle.com/code/melisandefritzsche/testing" target="_blank"
+                                            class="project-link">🧪 My Process</a>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="flip-hint">Click to flip back 🔄</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section>
+            <!-- Project Management Projects -->
+            <section id="project-management" class="project-section" data-filter="pm" data-aos="fade-up">
                 <h2>Project Management Projects</h2>
-                <h3>Break the Fourth Wall</h3>
-                <p>Using Scrum methodology within Jira and Confluence to document this&mdash;my portfolio
-                    build-out&mdash;project.</p>
-
-                <p>Skills Demonstrated</p>
-                <ul>
-                    <li>Leveraged project management and collaboration tools to maintain artifacts and document task
-                        progress.</li>
-                    <li>Planned sprints using prioritized backlog items.</li>
-                    <li>Created and organized epics, user stories, and tasks.</li>
-                    <li>Wrote user stories with defined acceptance criteria.</li>
-                    <li>Tracked effort and progress through time logging.</li>
-                    <li>Conducted sprint retrospectives to assess team performance.</li>
-                </ul>
-
-                <p>You can <a href="project-management.html" target="_blank">watch a slideshow</a> of how I used Jira
-                    and Confluence to manage this analyst portfolio project or <a
-                        href="Documents/analyst-portfolio-project-slides.pdf" target="download">download a pdf copy with
-                        my slide notes</a>.</p>
-                <p>I also have copies of project artifacts like:
-                <ul>
-                    <li><a href="Documents/AP-analyst-portfolio-charter.pdf" target="_blank">my project charter</a>,
-                    </li>
-                    <li><a href="Documents/AP-portfolio-analysis-projects-plan.pdf" target="_blank">my analysis projects
-                            plan</a> and</li>
-                    <li><a href="Documents/AP-portfolio-website-plan.pdf" target="_blank">my website build plan</a>.
-                    </li>
-                </ul>
-                </p>
-
+                <div class="projects-container">
+                    <div class="project-card flip-card" data-aos="flip-left" data-aos-delay="400">
+                        <div class="flip-card-inner">
+                            <!-- Front of card -->
+                            <div class="flip-card-front">
+                                <div class="card-header">
+                                    <h3>Break the Fourth Wall</h3>
+                                    <span class="project-type">Meta Project Management</span>
+                                </div>
+                                <div class="card-impact">
+                                    <h4>🎭 The Impact</h4>
+                                    <p class="project-desc">I managed this entire portfolio project using Scrum
+                                        methodology. Meta?
+                                        Absolutely. Effective? Definitely. I practice what I preach and documented every
+                                        sprint, retrospective, and backlog item.</p>
+                                    <div class="impact-stats">
+                                        <span class="stat">📋 Full Scrum implementation</span>
+                                        <span class="stat">⚡ Sprint-based delivery</span>
+                                        <span class="stat">📊 Complete documentation</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="flip-hint">Click to see the Management magic ✨</span>
+                                </div>
+                            </div>
+                            <!-- Back of card -->
+                            <div class="flip-card-back">
+                                <div class="card-header">
+                                    <h3>PM Skills That Deliver</h3>
+                                    <span class="project-type">Technical Deep Dive</span>
+                                </div>
+                                <div class="technical-details">
+                                    <h4>⚡ How I Keep Projects Moving</h4>
+                                    <ul class="skills-list">
+                                        <li>Scrum methodology implementation</li>
+                                        <li>Sprint planning and backlog management</li>
+                                        <li>Epic and user story creation</li>
+                                        <li>Acceptance criteria definition</li>
+                                        <li>Time tracking and progress monitoring</li>
+                                        <li>Sprint retrospectives and team performance</li>
+                                    </ul>
+                                    <h4>📁 The Documentation</h4>
+                                    <div class="project-links">
+                                        <a href="project-management.html" target="_blank" class="project-link">🎬
+                                            Slideshow</a>
+                                        <a href="Documents/AP-analyst-portfolio-charter.pdf" target="_blank"
+                                            class="project-link">📋 Project Charter</a>
+                                        <a href="Documents/AP-portfolio-analysis-projects-plan.pdf" target="_blank"
+                                            class="project-link">📊 Analysis Plan</a>
+                                        <a href="Documents/AP-portfolio-website-plan.pdf" target="_blank"
+                                            class="project-link">🌐 Website Plan</a>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="flip-hint">Click to flip back 🔄</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section class="quote center fit">
 
+            <!-- Confidence Quote -->
+            <section class="quote center fit" data-aos="zoom-in">
                 <blockquote cite="https://brainyquote.com/quotes/bill_belichick_975072">
                     It's not all about talent. It's about dependability, consistency, and being able to improve. If you
                     work hard and you're coachable, and you understand what you need to do, you can improve.
                 </blockquote>
-
                 <p class="quote">- Bill&nbsp;Belichick,<cite>"Interview with CNBC, April 13, 2017"</cite></p>
             </section>
         </main>
 
         <!--Global Footer-->
-        <footer>
-            <p class="socials"> <a href="mailto:melisande.fritzsche@gmail.com"><img src="Images/icon-email.png"
-                        alt="Email Melisande Fritzsche"></a> <a href="https://www.linkedin.com/in/melisandefritzsche"
-                    target="_blank"><img src="Images/icon-logo-linkedin.png"
-                        alt="Visit Melisande Fritzsche's LinkedIn page"></a></p>
+        <footer role="contentinfo" aria-label="Site footer">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <h3>Melisande Fritzsche</h3>
+                    <p class="footer-tagline">In the business of better</p>
+                    <p class="footer-description">Business Analyst • Operations & Systems Analyst • Strategy Analyst</p>
+                </div>
 
-            <div class="copy">
-                <p>&copy; 2025 Melisande Fritzsche</p>
-                <p>Last updated: <time datetime="2025-09-02"></time>September 2, 2025</p>
+                <div class="footer-section footer-nav">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="portfolio.html#SQL">SQL Projects</a></li>
+                            <li><a href="portfolio.html#Python">Python Projects</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-section footer-connect">
+                    <h4>Let's Connect</h4>
+                    <div class="footer-socials">
+                        <a href="mailto:melisande.fritzsche@gmail.com" aria-label="Email Melisande Fritzsche">
+                            <img src="Images/icon-email.png" alt="" width="32" height="32">
+                            <span>Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/melisandefritzsche" target="_blank" rel="noopener"
+                            aria-label="Visit Melisande Fritzsche's LinkedIn profile">
+                            <img src="Images/icon-logo-linkedin.png" alt="" width="32" height="32">
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Melisande Fritzsche. All rights reserved.</p>
+                <p>Last updated: <time id="last-updated" datetime="">Loading...</time></p>
             </div>
         </footer>
     </div>
     <!--End Page Container-->
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
+
+        // Portfolio filtering functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectSections = document.querySelectorAll('.project-section');
+
+            // Ensure all sections are visible by default
+            projectSections.forEach(section => {
+                section.style.display = 'block';
+            });
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const filter = this.getAttribute('data-filter');
+
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Show/hide sections based on filter
+                    projectSections.forEach(section => {
+                        if (filter === 'all' || section.getAttribute('data-filter') === filter) {
+                            section.style.display = 'block';
+                            // Re-trigger AOS animation
+                            section.setAttribute('data-aos', 'fade-up');
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+
+                    // Refresh AOS
+                    AOS.refresh();
+                });
+            });
+
+            // Flip card functionality
+            const flipCards = document.querySelectorAll('.flip-card');
+            flipCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    this.classList.toggle('flipped');
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
-
-
-
-
-
-
