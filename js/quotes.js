@@ -87,6 +87,13 @@ source:""},
             author: "Unknown",
             cite: "",
             source:""
+        },
+        {
+            text: "The knee bone's connected to the...something. The something's connected to the red thing. The red thing's connected to my wrist watch &mdash; uh-oh!",
+            author: "Dr.Nick",
+            source: "The Simpsons, S4E11",
+            cite:"https://simpsons.fandom.com/wiki/Homer%27s_Triple_Bypass"
+            
         }
     ]
 };

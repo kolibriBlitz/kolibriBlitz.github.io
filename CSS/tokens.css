@@ -69,6 +69,20 @@
     --light-about-text: var(--teal-lightest);
     --light-about-list: var(--teal-lightest);
 
+    /* Portfolio Colors - Default (Dark Theme) */
+    --portfolio-card-desc: var(--blue-mid);
+    --portfolio-card-text: var(--blue-light);
+    --portfolio-card-heading: var(--teal-dark);
+    --portfolio-nav-text: var(--blue-light);
+    --portfolio-filter-text: var(--teal-dark);
+
+    /* Light Theme Portfolio Colors */
+    --portfolio-card-desc: var(--teal-mid);
+    --light-portfolio-card-text: var(--blue-mid);
+    --light-portfolio-card-heading: var(--blue-mid);
+    --light-portfolio-nav-text: var(--blue-mid);
+    --light-portfolio-filter-text: var(--blue-mid);
+
     /* Typography */
     --font-primary: Tahoma, Verdana, sans-serif;
     --font-decorative: "Ink Free", "Papyrus", fantasy;
@@ -113,6 +127,12 @@
     /* Override about page colors for light theme */
     --about-text: var(--light-about-text);
     --about-list: var(--light-about-list);
+
+    /* Override portfolio colors for light theme */
+    --portfolio-card-text: var(--light-portfolio-card-text);
+    --portfolio-card-heading: var(--light-portfolio-card-heading);
+    --portfolio-nav-text: var(--light-portfolio-nav-text);
+    --portfolio-filter-text: var(--light-portfolio-filter-text);
 }
 
 [data-theme="dark"] {

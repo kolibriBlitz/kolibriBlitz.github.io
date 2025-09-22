@@ -247,10 +247,7 @@ section {
 
 }
 
-li {
-  /*font-size: 1.8rem;*/
-  list-style: square;
-}
+
 
 .page-container {
   display: flex;
@@ -1551,7 +1548,7 @@ a:hover.download {
   padding: 1.5rem;
   border-radius: 15px;
   text-decoration: none;
-  color: var(--teal-dark);
+  color: var(--portfolio-nav-text);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1592,7 +1589,7 @@ a:hover.download {
 
 .filter-btn {
   background: var(--green-light);
-  color: var(--teal-dark);
+  color: var(--portfolio-filter-text);
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
@@ -1654,6 +1651,8 @@ a:hover.download {
 
 /* Project Sections */
 .project-section {
+  display: block;
+  /* Ensure visible by default */
   margin: 4rem 0;
 }
 
@@ -1666,7 +1665,8 @@ a:hover.download {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Reduced from 350px for mobile */
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -1713,12 +1713,12 @@ a:hover.download {
 
 .flip-card-front {
   background: linear-gradient(135deg, var(--blue-light) 0%, var(--teal-lightest) 100%);
-  color: var(--teal-dark);
+  color: var(--portfolio-card-text);
 }
 
 .flip-card-back {
   background: linear-gradient(135deg, var(--green-light) 0%, var(--green-lightest) 100%);
-  color: var(--teal-dark);
+  color: var(--portfolio-card-text);
   transform: rotateY(180deg);
   overflow-y: auto;
   /* Allow scrolling on back cards */
@@ -1752,10 +1752,10 @@ a:hover.download {
 
 .card-impact h4,
 .technical-details h4 {
-  font-size: 1.2rem;
+  font-size: clamp(1.4rem, 1.4vw, 1.6rem);
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--teal-dark);
+  color: var(--portfolio-card-heading);
 }
 
 .impact-stats {
@@ -1766,25 +1766,33 @@ a:hover.download {
 }
 
 .stat {
-  font-size: 0.9rem;
+  font-size: clamp(1.2rem, 1.2vw, 1.4rem);
   font-weight: 600;
+  color: var(--portfolio-card-text)
 }
 
 .skills-list {
   list-style: none;
   padding: 0;
   margin-bottom: 1.5rem;
+
 }
 
 .skills-list li {
   padding: 0.25rem 0;
-  font-size: 0.95rem;
+  font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+  color: var(--portfolio-card-text)
 }
 
 .skills-list li::before {
   content: "⚡ ";
   color: var(--contrast-teal-dark);
   margin-right: 0.5rem;
+}
+
+.project-desc {
+  color: var(--portfolio-card-desc);
+  font-size: clamp(1.4rem, 1.2vw, 1.8rem);
 }
 
 .project-links {
@@ -1799,7 +1807,8 @@ a:hover.download {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  ;
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -1815,9 +1824,10 @@ a:hover.download {
 }
 
 .flip-hint {
-  font-size: 0.8rem;
+  font-size: clamp(1rem, 1vw, 1.2rem);
   font-style: italic;
   opacity: 0.8;
+  color: var(--portfolio-card-text)
 }
 
 /* Responsive Design */
@@ -1843,11 +1853,14 @@ a:hover.download {
   .projects-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 0 1rem;
+    /* Add horizontal padding for mobile */
   }
 
   .flip-card {
     height: 450px;
-    /* Increased from 350px */
+    max-width: 100%;
+    /* Ensure cards don't overflow */
   }
 
   .flip-card-front,
