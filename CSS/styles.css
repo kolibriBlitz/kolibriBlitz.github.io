@@ -1516,6 +1516,32 @@ a:hover.download {
   transition: stroke 0.3s;
 }
 
+/* Fallback text for browsers that don't display SVG properly */
+.scroll-top-fallback {
+  display: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--blue-light);
+  position: absolute;
+  text-align: center;
+}
+
+/* Show fallback on mobile devices where SVG might not render */
+@media screen and (max-width: 768px) {
+  .scroll-to-top {
+    position: relative;
+  }
+
+  .scroll-top-fallback {
+    display: block;
+    position: static;
+  }
+
+  .scroll-to-top .scroll-top-svg {
+    display: none;
+  }
+}
+
 /* ========================================
    PORTFOLIO PAGE STYLES
 ======================================== */

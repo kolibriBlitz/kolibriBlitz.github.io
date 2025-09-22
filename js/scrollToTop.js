@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <path class="scroll-top-arrow" d="M11 18V4" stroke="var(--blue-light)" stroke-width="2" stroke-linecap="round"/>
             <path class="scroll-top-arrow" d="M5 12L11 5L17 12" stroke="var(--green-lightest)" stroke-width="2" stroke-linecap="round"/>
         </svg>
+        <span class="scroll-top-fallback">Top</span>
     `;
     scrollBtn.style.display = 'none';
     document.body.appendChild(scrollBtn);
