@@ -9,10 +9,12 @@ const quoteData = {
             cite: '"Interview with Fast Company, July 6, 2010"',
             source: "brainyquote.com/quotes/gary_vaynerchuk_503132"
         },
-        {text: "Curiosity is my default setting.",
+        {
+            text: "Curiosity is my default setting.",
     author: "Mel"
         },
-        {text:"See a need. Fill a need.",
+        {
+            text:"See a need. Fill a need.",
             author:"Big Weld",
             cite:"Robots",
             source:"https://www.imdb.com/title/tt0358082/quotes/?ref_=tt_dyk_qu"
@@ -29,7 +31,8 @@ const quoteData = {
         {
             text: "It\’s not whether you get knocked down, it\’s whether you get up.",
             author: "Vince Lombardi",
-            cite:"Unknown",  source:"https://www.brainyquote.com/quotes/vince_lombardi_121925"
+            cite:"Unknown",  
+            source:"https://www.brainyquote.com/quotes/vince_lombardi_121925"
         },
         {
             text: "Challenge accepted.",
@@ -56,7 +59,8 @@ const quoteData = {
             text: "I don\’t just think outside the box — I question why the box exists. And why a box? Why not a sphere or a pyramid or...",
     author: "Me",
 cite:"all the dang time",
-source:""},
+source:""
+        },
 {
     text: "Chaos is just data waiting to be sorted or a mistake ready to be fixed.",
     author: "Me"
@@ -91,8 +95,8 @@ source:""},
         {
             text: "The knee bone's connected to the...something. The something's connected to the red thing. The red thing's connected to my wrist watch — uh-oh!",
             author: "Dr.Nick",
-            source: "The Simpsons, S4E11",
-            cite:"https://simpsons.fandom.com/wiki/Homer%27s_Triple_Bypass"
+            cite: "The Simpsons, \"Homer's Triple Bypass\" - S4E11",
+            source:"https://simpsons.fandom.com/wiki/Homer%27s_Triple_Bypass",
             
         }
     ]
