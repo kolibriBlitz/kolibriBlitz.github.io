@@ -83,6 +83,18 @@
     --light-portfolio-nav-text: var(--teal-dark);
     --light-portfolio-filter-text: var(--blue-mid);
 
+    /* Skills Navigation Arrow Colors - Default (Dark Theme) */
+    --skills-arrow-color: var(--teal-lightest);
+    --skills-arrow-hover-color: var(--green-lightest);
+    --skills-arrow-border-hover: var(--teal-lightest);
+    --skills-arrow-disabled-color: var(--teal-lightest);
+
+    /* Light Theme Skills Navigation Arrow Colors */
+    --light-skills-arrow-color: var(--teal-dark);
+    --light-skills-arrow-hover-color: var(--green-mid);
+    --light-skills-arrow-border-hover: var(--teal-dark);
+    --light-skills-arrow-disabled-color: var(--blue-mid);
+
     /* Typography */
     --font-primary: Tahoma, Verdana, sans-serif;
     --font-decorative: "Ink Free", "Papyrus", fantasy;
@@ -133,6 +145,12 @@
     --portfolio-card-heading: var(--light-portfolio-card-heading);
     --portfolio-nav-text: var(--light-portfolio-nav-text);
     --portfolio-filter-text: var(--light-portfolio-filter-text);
+
+    /* Override skills navigation arrow colors for light theme */
+    --skills-arrow-color: var(--light-skills-arrow-color);
+    --skills-arrow-hover-color: var(--light-skills-arrow-hover-color);
+    --skills-arrow-border-hover: var(--light-skills-arrow-border-hover);
+    --skills-arrow-disabled-color: var(--light-skills-arrow-disabled-color);
 }
 
 [data-theme="dark"] {

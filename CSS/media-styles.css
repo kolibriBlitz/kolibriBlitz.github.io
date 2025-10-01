@@ -206,16 +206,14 @@
 
 /* Mobile horizontal scroll for skills */
 @media (max-width: 768px) {
-    .skills-scroll-indicator {
-        display: block;
-    }
-
     .skills-scroll-wrapper {
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: thin;
         scrollbar-color: var(--green-light) transparent;
+        outline: none;
+        /* Remove focus outline since we're using custom navigation */
     }
 
     .skills-scroll-wrapper::-webkit-scrollbar {
@@ -281,8 +279,63 @@
         font-size: 0.9rem;
         padding: 0.2rem 0;
     }
+}
 
-    .scroll-hint {
-        font-size: 0.85rem;
+/* Skills navigation arrows - accessible alternative to swipe hint */
+.skills-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: none;
+    /* Hidden by default, shown on mobile */
+    align-items: center;
+    justify-content: center;
+    color: var(--skills-arrow-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.skills-nav-arrow:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--skills-arrow-border-hover);
+    color: var(--skills-arrow-hover-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.skills-nav-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    color: var(--skills-arrow-disabled-color);
+}
+
+.skills-nav-arrow svg {
+    color: inherit;
+    stroke: currentColor;
+}
+
+.skills-nav-left {
+    left: -20px;
+}
+
+.skills-nav-right {
+    right: -20px;
+}
+
+@media (max-width: 768px) {
+    .skills-nav-arrow {
+        display: flex;
+    }
+
+    .skills-container {
+        position: relative;
+        padding: 0 30px;
+        /* Space for arrows */
     }
 }

@@ -129,9 +129,18 @@
             <aside id="skills-overview" class="skills-overview" data-aos="fade-left">
                 <h2>Skills at a Glance</h2>
                 <div class="skills-container">
-                    <div class="skills-scroll-indicator">
-                        <span class="scroll-hint">Swipe to explore →</span>
-                    </div>
+                    <button class="skills-nav-arrow skills-nav-left" aria-label="Scroll left through skills" disabled>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="skills-nav-arrow skills-nav-right" aria-label="Scroll right through skills">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
                     <div class="skills-scroll-wrapper">
                         <div class="skills-grid">
                             <div class="skill-category" data-aos="slide-right" data-aos-delay="100">
@@ -480,46 +489,60 @@
             easing: 'ease-out-cubic'
         });
 
-        // Skills horizontal scroll interaction
+        // Skills horizontal scroll interaction with accessible navigation
         const skillsScrollWrapper = document.querySelector('.skills-scroll-wrapper');
-        const scrollHint = document.querySelector('.scroll-hint');
+        const leftArrow = document.querySelector('.skills-nav-left');
+        const rightArrow = document.querySelector('.skills-nav-right');
 
-        if (skillsScrollWrapper && scrollHint) {
-            let hasScrolled = false;
+        if (skillsScrollWrapper && leftArrow && rightArrow) {
+            // Function to update arrow states based on scroll position
+            function updateArrowStates() {
+                const { scrollLeft, scrollWidth, clientWidth } = skillsScrollWrapper;
+                const isAtStart = scrollLeft <= 0;
+                const isAtEnd = scrollLeft >= scrollWidth - clientWidth - 1;
 
-            skillsScrollWrapper.addEventListener('scroll', function () {
-                if (!hasScrolled) {
-                    hasScrolled = true;
-                    skillsScrollWrapper.classList.add('scrolled');
-                    setTimeout(() => {
-                        if (scrollHint) {
-                            scrollHint.style.opacity = '0';
-                        }
-                    }, 100);
+                leftArrow.disabled = isAtStart;
+                rightArrow.disabled = isAtEnd;
+            }
+
+            // Arrow click handlers
+            leftArrow.addEventListener('click', () => {
+                const cardWidth = 250 + 24; // card width + gap
+                skillsScrollWrapper.scrollBy({
+                    left: -cardWidth,
+                    behavior: 'smooth'
+                });
+            });
+
+            rightArrow.addEventListener('click', () => {
+                const cardWidth = 250 + 24; // card width + gap
+                skillsScrollWrapper.scrollBy({
+                    left: cardWidth,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Update arrow states on scroll
+            skillsScrollWrapper.addEventListener('scroll', updateArrowStates);
+
+            // Initial arrow state
+            setTimeout(updateArrowStates, 100); // Small delay for layout
+
+            // Keyboard navigation for accessibility
+            skillsScrollWrapper.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft' && !leftArrow.disabled) {
+                    leftArrow.click();
+                    e.preventDefault();
+                } else if (e.key === 'ArrowRight' && !rightArrow.disabled) {
+                    rightArrow.click();
+                    e.preventDefault();
                 }
             });
 
-            // Touch interaction for better mobile experience
-            let startX = null;
-
-            skillsScrollWrapper.addEventListener('touchstart', function (e) {
-                startX = e.touches[0].clientX;
-            });
-
-            skillsScrollWrapper.addEventListener('touchmove', function (e) {
-                if (startX !== null) {
-                    const currentX = e.touches[0].clientX;
-                    const diff = startX - currentX;
-
-                    if (Math.abs(diff) > 10 && !hasScrolled) {
-                        hasScrolled = true;
-                        skillsScrollWrapper.classList.add('scrolled');
-                        if (scrollHint) {
-                            scrollHint.style.opacity = '0';
-                        }
-                    }
-                }
-            });
+            // Make scroll wrapper focusable for keyboard navigation
+            skillsScrollWrapper.setAttribute('tabindex', '0');
+            skillsScrollWrapper.setAttribute('role', 'region');
+            skillsScrollWrapper.setAttribute('aria-label', 'Skills categories - use arrow keys to navigate');
         }
 
         // Portfolio filtering functionality

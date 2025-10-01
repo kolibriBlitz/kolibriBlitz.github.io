@@ -1,6 +1,15 @@
 /* See tokens.css for color palette and typography variables */
 
-* {
+/* Target specific text elements instead of universal selector */
+body,
+p,
+li,
+span:not(.skills-nav-arrow span),
+div:not(.skills-nav-arrow),
+a,
+button:not(.skills-nav-arrow),
+input,
+textarea {
   color: light-dark(var(--light-color), var(--dark-color));
 }
 
@@ -1684,7 +1693,7 @@ a:hover.download {
 .skill-category h3 {
   color: var(--blue-light);
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem,2.5vw,2rem);
 }
 
 .skill-category ul {
@@ -1695,7 +1704,7 @@ a:hover.download {
 .skill-category li {
   color: var(--teal-lightest);
   padding: 0.25rem 0;
-  font-size: 0.95rem;
+  font-size: clamp(1rem,2vw,1.8rem);
 }
 
 .skill-category li::before {
