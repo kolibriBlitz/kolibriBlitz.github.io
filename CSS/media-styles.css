@@ -203,3 +203,86 @@
         margin: 24px 72px;
     }
 }
+
+/* Mobile horizontal scroll for skills */
+@media (max-width: 768px) {
+    .skills-scroll-indicator {
+        display: block;
+    }
+
+    .skills-scroll-wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: var(--green-light) transparent;
+    }
+
+    .skills-scroll-wrapper::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .skills-scroll-wrapper::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+    }
+
+    .skills-scroll-wrapper::-webkit-scrollbar-thumb {
+        background: var(--green-light);
+        border-radius: 2px;
+    }
+
+    .skills-grid {
+        display: flex !important;
+        gap: 1.5rem;
+        padding-bottom: 1rem;
+        min-width: max-content;
+    }
+
+    .skill-category {
+        flex: 0 0 250px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-category:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Hide scroll hint after first interaction */
+    .skills-scroll-wrapper.scrolled .scroll-hint {
+        opacity: 0 !important;
+        transition: opacity 0.5s ease;
+    }
+}
+
+/* Enhanced mobile touch interactions for skills */
+@media (max-width: 480px) {
+    .skills-overview {
+        padding: 1.5rem;
+    }
+
+    .skill-category {
+        flex: 0 0 220px;
+        padding: 1.2rem;
+    }
+
+    .skill-category h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .skill-category li {
+        font-size: 0.9rem;
+        padding: 0.2rem 0;
+    }
+
+    .scroll-hint {
+        font-size: 0.85rem;
+    }
+}

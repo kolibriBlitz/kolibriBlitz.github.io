@@ -128,33 +128,40 @@
             <!-- Skills Overview Aside -->
             <aside id="skills-overview" class="skills-overview" data-aos="fade-left">
                 <h2>Skills at a Glance</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Business Analysis</h3>
-                        <ul>
-                            <li>Market Research</li>
-                            <li>Competitor Analysis</li>
-                            <li>Risk Assessment</li>
-                            <li>SWOT Analysis</li>
-                        </ul>
+                <div class="skills-container">
+                    <div class="skills-scroll-indicator">
+                        <span class="scroll-hint">Swipe to explore →</span>
                     </div>
-                    <div class="skill-category">
-                        <h3>Data Analysis</h3>
-                        <ul>
-                            <li>SQL (Advanced)</li>
-                            <li>Python</li>
-                            <li>Data Visualization</li>
-                            <li>Statistical Analysis</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Project Management</h3>
-                        <ul>
-                            <li>Scrum/Agile</li>
-                            <li>Jira/Confluence</li>
-                            <li>Sprint Planning</li>
-                            <li>Stakeholder Communication</li>
-                        </ul>
+                    <div class="skills-scroll-wrapper">
+                        <div class="skills-grid">
+                            <div class="skill-category" data-aos="slide-right" data-aos-delay="100">
+                                <h3>Business Analysis</h3>
+                                <ul>
+                                    <li>Market Research</li>
+                                    <li>Competitor Analysis</li>
+                                    <li>Risk Assessment</li>
+                                    <li>SWOT Analysis</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category" data-aos="slide-right" data-aos-delay="200">
+                                <h3>Data Analysis</h3>
+                                <ul>
+                                    <li>SQL (Advanced)</li>
+                                    <li>Python</li>
+                                    <li>Data Visualization</li>
+                                    <li>Statistical Analysis</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category" data-aos="slide-right" data-aos-delay="300">
+                                <h3>Project Management</h3>
+                                <ul>
+                                    <li>Scrum/Agile</li>
+                                    <li>Jira/Confluence</li>
+                                    <li>Sprint Planning</li>
+                                    <li>Stakeholder Communication</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </aside>
@@ -472,6 +479,48 @@
             once: true,
             easing: 'ease-out-cubic'
         });
+
+        // Skills horizontal scroll interaction
+        const skillsScrollWrapper = document.querySelector('.skills-scroll-wrapper');
+        const scrollHint = document.querySelector('.scroll-hint');
+
+        if (skillsScrollWrapper && scrollHint) {
+            let hasScrolled = false;
+
+            skillsScrollWrapper.addEventListener('scroll', function () {
+                if (!hasScrolled) {
+                    hasScrolled = true;
+                    skillsScrollWrapper.classList.add('scrolled');
+                    setTimeout(() => {
+                        if (scrollHint) {
+                            scrollHint.style.opacity = '0';
+                        }
+                    }, 100);
+                }
+            });
+
+            // Touch interaction for better mobile experience
+            let startX = null;
+
+            skillsScrollWrapper.addEventListener('touchstart', function (e) {
+                startX = e.touches[0].clientX;
+            });
+
+            skillsScrollWrapper.addEventListener('touchmove', function (e) {
+                if (startX !== null) {
+                    const currentX = e.touches[0].clientX;
+                    const diff = startX - currentX;
+
+                    if (Math.abs(diff) > 10 && !hasScrolled) {
+                        hasScrolled = true;
+                        skillsScrollWrapper.classList.add('scrolled');
+                        if (scrollHint) {
+                            scrollHint.style.opacity = '0';
+                        }
+                    }
+                }
+            });
+        }
 
         // Portfolio filtering functionality
         document.addEventListener('DOMContentLoaded', function () {
