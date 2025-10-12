@@ -339,3 +339,107 @@
         /* Space for arrows */
     }
 }
+/* Portfolio expandable headers for mobile */
+@media (max-width: 768px) {
+    .project-section {
+        margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+
+    .projects-container {
+        display: block;
+    }
+
+    .project-expandable {
+        border: 1px solid var(--border-color, #ccc);
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        background: var(--card-background, #222);
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .project-header {
+        padding: 1rem 1.25rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--card-background, #222);
+        border-bottom: 1px solid transparent;
+        transition: all 0.3s ease;
+        user-select: none;
+    }
+
+    .project-header.expanded {
+        border-bottom-color: var(--border-color, #ccc);
+        background: var(--card-hover-background, #333);
+    }
+
+    .project-header-content {
+        flex: 1;
+    }
+
+    .project-header h3 {
+        margin: 0 0 0.25rem 0;
+        font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+        color: var(--heading-color, #fff);
+    }
+
+    .project-header .project-type {
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+        color: var(--text-secondary, #aaa);
+        font-weight: 500;
+    }
+
+    .expand-icon {
+        width: 24px;
+        height: 24px;
+        margin-left: 1rem;
+        transition: transform 0.3s ease;
+        color: var(--text-secondary, #aaa);
+        flex-shrink: 0;
+    }
+
+    .expand-icon.expanded {
+        transform: rotate(180deg);
+    }
+
+    .project-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .project-content.expanded {
+        max-height: 2000px;
+        transition: max-height 0.5s ease-in;
+    }
+
+    .project-content-inner {
+        padding: 1.25rem;
+        padding-top: 0;
+    }
+
+    /* Show flip hints on mobile */
+    .flip-hint {
+        display: block !important;
+        text-align: center;
+        font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+        color: var(--text-secondary, #aaa);
+        margin-top: 0.5rem;
+    }
+}
+
+/* Hide flip hints on larger screens */
+@media (min-width: 769px) {
+    .flip-hint {
+        display: none !important;
+    }
+}
+
+/* Hide flip hints on larger screens */
+@media (min-width: 769px) {
+    .flip-hint {
+        display: none !important;
+    }
+}

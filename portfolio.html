@@ -550,6 +550,64 @@
             const filterBtns = document.querySelectorAll('.filter-btn');
             const projectSections = document.querySelectorAll('.project-section');
 
+            // Mobile expandable projects functionality
+            function createExpandableProjects() {
+                if (window.innerWidth <= 768) {
+                    document.querySelectorAll('.projects-container').forEach(container => {
+                        // Only run if not already transformed
+                        if (!container.classList.contains('expandable-ready')) {
+                            container.classList.add('expandable-ready');
+                            const cards = Array.from(container.querySelectorAll('.project-card'));
+                            container.innerHTML = '';
+                            cards.forEach((card, idx) => {
+                                const title = card.querySelector('h3') ? card.querySelector('h3').textContent : 'Project';
+                                const type = card.querySelector('.project-type') ? card.querySelector('.project-type').textContent : '';
+                                const expandable = document.createElement('div');
+                                expandable.className = 'project-expandable';
+                                expandable.innerHTML = `<div class="project-header" role="button" tabindex="0" aria-expanded="false" aria-controls="project-content-${idx}"><div class="project-header-content"><h3>${title}</h3><span class="project-type">${type}</span></div><svg class="expand-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="project-content" id="project-content-${idx}"><div class="project-content-inner">${card.outerHTML}</div></div>`;
+                                container.appendChild(expandable);
+                            });
+                            // Add event listeners
+                            container.querySelectorAll('.project-header').forEach(header => {
+                                header.addEventListener('click', function () {
+                                    const expanded = this.classList.contains('expanded');
+                                    container.querySelectorAll('.project-header').forEach(h => {
+                                        h.classList.remove('expanded');
+                                        h.nextElementSibling.classList.remove('expanded');
+                                        h.setAttribute('aria-expanded', 'false');
+                                        h.querySelector('.expand-icon').classList.remove('expanded');
+                                    });
+                                    if (!expanded) {
+                                        this.classList.add('expanded');
+                                        this.nextElementSibling.classList.add('expanded');
+                                        this.setAttribute('aria-expanded', 'true');
+                                        this.querySelector('.expand-icon').classList.add('expanded');
+                                    }
+                                });
+                                header.addEventListener('keydown', function (e) {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        this.click();
+                                    }
+                                });
+                            });
+                        }
+                    });
+                }
+            }
+
+            // Initialize expandable projects
+            createExpandableProjects();
+
+            // Handle window resize
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) {
+                    location.reload(); // Simple solution to restore original layout
+                } else {
+                    createExpandableProjects();
+                }
+            });
+
             // Ensure all sections are visible by default
             projectSections.forEach(section => {
                 section.style.display = 'block';

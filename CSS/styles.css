@@ -1572,8 +1572,8 @@ a:hover.download {
 }
 
 .nav-card,
-.nav-card:link,
-.nav-card:visited {
+.nav-card:link *,
+.nav-card:visited * {
   background: var(--blue-light);
   padding: 1.5rem;
   border-radius: 15px;
@@ -1620,7 +1620,7 @@ a:hover.download {
 
 .filter-btn {
   background: var(--green-light);
-  color: var(--portfolio-filter-text);
+  color: var(--portfolio-filter-text) !important;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
