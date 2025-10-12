@@ -271,12 +271,12 @@
     }
 
     .skill-category h3 {
-        font-size: 1.1rem;
+        font-size: clamp(1.1rem,1.5vw,1.3rem);
         margin-bottom: 0.8rem;
     }
 
     .skill-category li {
-        font-size: 0.9rem;
+        font-size: clamp(0.9rem,1.2vw,1.1rem);
         padding: 0.2rem 0;
     }
 }

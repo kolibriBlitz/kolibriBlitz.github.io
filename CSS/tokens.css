@@ -103,12 +103,12 @@
 
     /* Font Sizes - Using clamp values */
     --font-size-h1: clamp(1.2rem, 7.5vw, 7.2rem);
-    --font-size-h2: clamp(1.4rem, 3vh, 2.4rem);
-    --font-size-h3: clamp(1.4rem, 3vh, 2.4rem);
+    --font-size-h2: clamp(1.4rem, 3vw, 2.4rem);
+    --font-size-h3: clamp(1.4rem, 3vw, 2.4rem);
     --font-size-header-p: clamp(1rem, 4.5vw, 3.6rem);
-    --font-size-body: clamp(1.2rem, 2.5vh, 1.8rem);
+    --font-size-body: clamp(1.2rem, 2.5vw, 1.8rem);
     --font-size-nav: clamp(1.2rem, 2vw, 1.8rem);
-    --font-size-quote: clamp(1rem, 1.75vh, 1.6rem);
+    --font-size-quote: clamp(1rem, 1.75vw, 1.6rem);
 
     /* Line Heights */
     --line-height-h1: clamp(2rem, 3vh, 3rem);
